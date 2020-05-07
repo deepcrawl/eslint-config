@@ -1,0 +1,17 @@
+{
+  "extends": ["@deepcrawl/tslint-config"],
+  "rules": {
+    "no-angle-bracket-type-assertion": false,
+    "no-implicit-dependencies": false,
+    "comment-format": false,
+    "array-type": false,
+    "trailing-comma": true,
+    "variable-name": false,
+    "no-return-undefined": false,
+    "no-unused": false,
+    "prefer-const-enum": false,
+    "no-big-function": false,
+    "no-empty-interface": false,
+    "interface-name": false
+  }
+}
