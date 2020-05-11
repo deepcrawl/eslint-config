@@ -30,7 +30,6 @@ module.exports = {
         "@typescript-eslint/no-non-null-assertion": "off",
         "@typescript-eslint/no-use-before-define": "off",
         "@typescript-eslint/require-await": "off",
-        "@typescript-eslint/tslint/config": "off",
         "max-classes-per-file": "off",
         "max-lines-per-function": "off",
       },
@@ -53,7 +52,6 @@ module.exports = {
   },
   plugins: [
     "@typescript-eslint",
-    "@typescript-eslint/tslint",
     "eslint-plugin-graphql",
     "eslint-plugin-jest",
     "prettier",
@@ -178,14 +176,21 @@ module.exports = {
     "@typescript-eslint/restrict-template-expressions": "off",
     "@typescript-eslint/return-await": "error",
     "@typescript-eslint/triple-slash-reference": "error",
-    "@typescript-eslint/tslint/config": [
-      "error",
-      {
-        lintFile: "./tslint.json",
-      },
-    ],
     "@typescript-eslint/unbound-method": "error",
     "@typescript-eslint/unified-signatures": "error",
+    "@typescript-eslint/typedef": ["error", {
+      propertyDeclaration: true,
+
+    }],
+    "@typescript-eslint/naming-convention": "error",
+    "@typescript-eslint/ban-types": ["error", {
+      "types": {
+        "Object": "Avoid using the `Object` type. Did you mean `object`?",
+        "Boolean": "Avoid using the `Boolean` type. Did you mean `boolean`?",
+        "Number": "Avoid using the `Number` type. Did you mean `number`?",
+        "String": "Avoid using the `String` type. Did you mean `string`?",
+      },
+    }],
     "jest/expect-expect": [
       "error",
       {
@@ -215,5 +220,15 @@ module.exports = {
     "prefer-spread": "error",
     "prefer-template": "error",
     "require-await": "off",
+    "no-shadow": "off",
+    "sort-keys": "off",
+    "no-void": "error",
+    "no-restricted-properties": ["error", {
+      "object": "Object",
+      "property": "assign",
+      "message": "Object.assign allows getting around type checking. Consider another solution.",
+    }],
+    "spaced-comment": "error",
+    "curly": ["error", "multi-line"],
   },
 };
