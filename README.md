@@ -20,7 +20,6 @@ Update your `.eslintrc` configuration:
 
 ```json
 {
-  "extends": ["plugin:deepcrawl/eslint-config"],
-  "plugins": ["@deepcrawl/eslint-config"]
+  "extends": ["plugin:deepcrawl/eslint-config"]
 }
 ```
