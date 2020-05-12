@@ -7,5 +7,20 @@ ESLint rules recommended by DeepCrawl.
 Add to your `package.json`:
 
 ```json
-  "@deepcrawl/eslint-config": "^0.1.0"
+{
+  "devDependencies": {
+    "@deepcrawl/eslint-config": "^0.1.0"
+  }
+}
+```
+
+## Usage
+
+Update your `.eslintrc` configuration:
+
+```json
+{
+  "extends": ["plugin:deepcrawl/eslint-config"],
+  "plugins": ["@deepcrawl/eslint-config"]
+}
 ```
