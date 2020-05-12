@@ -197,15 +197,6 @@ module.exports = {
     "curly": ["error", "multi-line"],
     "default-case-last": "error",
     "max-classes-per-file": ["error", 1],
-    "max-len": [
-      "error",
-      {
-        code: 120,
-        ignoreComments: true,
-        ignorePattern: "^(export|import)*",
-        ignoreTemplateLiterals: true,
-      }
-    ],
     "max-lines-per-function": ["error", 15],
     "max-params": ["error", 7],
     "max-statements-per-line": [
@@ -223,12 +214,7 @@ module.exports = {
         ]
       }
     ],
-    "no-delete-var": "error",
     "no-else-return": "error",
-    "no-empty-function": "off",
-    "no-empty-pattern": "error",
-    "no-extra-parens": "error",
-    "no-magic-numbers": "off",
     "no-multi-str": "error",
     "no-restricted-properties": [
       "error",
@@ -239,14 +225,8 @@ module.exports = {
       }
     ],
     "no-self-assign": "error",
-    "no-shadow": "off",
-    "no-use-before-define": "error",
     "object-shorthand": "error",
-    "prefer-const": "error",
-    "prefer-spread": "error",
     "prefer-template": "error",
-    "require-await": "off",
-    "sort-keys": "off",
     "spaced-comment": "error"
   },
 };
