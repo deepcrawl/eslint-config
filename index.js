@@ -150,15 +150,18 @@ module.exports = {
     "prettier/prettier": [
       "error",
       {
+        arrowParens: "avoid",
+        bracketSpacing: true,
         printWidth: 120,
-        tabWidth: 2,
-        useTabs: false,
         semi: true,
         singleQuote: false,
+        tabWidth: 2,
         trailingComma: "all",
-        bracketSpacing: true,
-        arrowParens: "avoid",
         usePrettierrc: false,
+        useTabs: false,
+      },
+      {
+        "usePrettierrc": false,
       },
     ],
     "sonarjs/cognitive-complexity": ["error", 8],
