@@ -127,18 +127,24 @@ module.exports = {
     "@typescript-eslint/triple-slash-reference": "error",
     "@typescript-eslint/unbound-method": "error",
     "@typescript-eslint/unified-signatures": "error",
-    "@typescript-eslint/typedef": ["error", {
-      propertyDeclaration: true,
-    }],
-    "@typescript-eslint/naming-convention": "error",
-    "@typescript-eslint/ban-types": ["error", {
-      "types": {
-        "Object": "Avoid using the `Object` type. Did you mean `object`?",
-        "Boolean": "Avoid using the `Boolean` type. Did you mean `boolean`?",
-        "Number": "Avoid using the `Number` type. Did you mean `number`?",
-        "String": "Avoid using the `String` type. Did you mean `string`?",
+    "@typescript-eslint/typedef": [
+      "error",
+      {
+        propertyDeclaration: true,
       },
-    }],
+    ],
+    "@typescript-eslint/naming-convention": "error",
+    "@typescript-eslint/ban-types": [
+      "error",
+      {
+        types: {
+          Object: "Avoid using the `Object` type. Did you mean `object`?",
+          Boolean: "Avoid using the `Boolean` type. Did you mean `boolean`?",
+          Number: "Avoid using the `Number` type. Did you mean `number`?",
+          String: "Avoid using the `String` type. Did you mean `string`?",
+        },
+      },
+    ],
     "array-func/avoid-reverse": "error",
     "clean-code/feature-envy": "error",
     "jest/expect-expect": [
@@ -161,7 +167,7 @@ module.exports = {
         useTabs: false,
       },
       {
-        "usePrettierrc": false,
+        usePrettierrc: false,
       },
     ],
     "sonarjs/cognitive-complexity": ["error", 8],
@@ -211,15 +217,19 @@ module.exports = {
     "require-await": "off",
     "no-shadow": "off",
     "sort-keys": "off",
-    "no-restricted-properties": ["error", {
-      "object": "Object",
-      "property": "assign",
-      "message": "Object.assign allows getting around type checking. Consider another solution.",
-    }],
+    "no-restricted-properties": [
+      "error",
+      {
+        object: "Object",
+        property: "assign",
+        message:
+          "Object.assign allows getting around type checking. Consider another solution.",
+      },
+    ],
     "spaced-comment": "error",
-    "curly": ["error", "multi-line"],
+    curly: ["error", "multi-line"],
     "no-else-return": "error",
-    "complexity": ["error", 10],
+    complexity: ["error", 10],
     "no-delete-var": "error",
     "no-empty-pattern": "error",
     "no-multi-str": "error",
