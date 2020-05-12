@@ -26,6 +26,17 @@ module.exports = {
       },
     ],
     "@typescript-eslint/await-thenable": "error",
+    "@typescript-eslint/ban-types": [
+      "error",
+      {
+        types: {
+          Object: "Avoid using the `Object` type. Did you mean `object`?",
+          Boolean: "Avoid using the `Boolean` type. Did you mean `boolean`?",
+          Number: "Avoid using the `Number` type. Did you mean `number`?",
+          String: "Avoid using the `String` type. Did you mean `string`?",
+        },
+      },
+    ],
     "@typescript-eslint/camelcase": [
       "error",
       {
@@ -61,6 +72,7 @@ module.exports = {
     "@typescript-eslint/generic-type-naming": ["error", "^T[A-Z][a-zA-Z]+$"],
     "@typescript-eslint/interface-name-prefix": ["error", "always"],
     "@typescript-eslint/member-ordering": "off",
+    "@typescript-eslint/naming-convention": "error",
     "@typescript-eslint/no-empty-function": [
       "error",
       {
@@ -125,26 +137,14 @@ module.exports = {
     "@typescript-eslint/restrict-template-expressions": "off",
     "@typescript-eslint/return-await": "error",
     "@typescript-eslint/triple-slash-reference": "error",
-    "@typescript-eslint/unbound-method": "error",
-    "@typescript-eslint/unified-signatures": "error",
     "@typescript-eslint/typedef": [
       "error",
       {
         propertyDeclaration: true,
       },
     ],
-    "@typescript-eslint/naming-convention": "error",
-    "@typescript-eslint/ban-types": [
-      "error",
-      {
-        types: {
-          Object: "Avoid using the `Object` type. Did you mean `object`?",
-          Boolean: "Avoid using the `Boolean` type. Did you mean `boolean`?",
-          Number: "Avoid using the `Number` type. Did you mean `number`?",
-          String: "Avoid using the `String` type. Did you mean `string`?",
-        },
-      },
-    ],
+    "@typescript-eslint/unbound-method": "error",
+    "@typescript-eslint/unified-signatures": "error",
     "array-func/avoid-reverse": "error",
     "clean-code/feature-envy": "error",
     "jest/expect-expect": [
@@ -191,7 +191,9 @@ module.exports = {
     "sonarjs/no-useless-catch": "error",
     "sonarjs/prefer-immediate-return": "error",
     "sonarjs/prefer-while": "error",
-    "max-lines-per-function": ["error", 15],
+    "complexity": ["error", 10],
+    "curly": ["error", "multi-line"],
+    "default-case-last": "error",
     "max-classes-per-file": ["error", 1],
     "max-len": [
       "error",
@@ -200,48 +202,48 @@ module.exports = {
         ignoreComments: true,
         ignorePattern: "^(export|import)*",
         ignoreTemplateLiterals: true,
-      },
+      }
+    ],
+    "max-lines-per-function": ["error", 15],
+    "max-params": ["error", 7],
+    "max-statements-per-line": [
+      "error",
+      {
+        max: 1,
+      }
     ],
     "no-console": [
       "error",
       {
-        allow: ["warn", "error"],
-      },
+        "allow": [
+          "warn",
+          "error"
+        ]
+      }
     ],
+    "no-delete-var": "error",
+    "no-else-return": "error",
     "no-empty-function": "off",
+    "no-empty-pattern": "error",
+    "no-extra-parens": "error",
     "no-magic-numbers": "off",
-    "object-shorthand": "error",
-    "prefer-spread": "error",
-    "prefer-template": "error",
-    "require-await": "off",
-    "no-shadow": "off",
-    "sort-keys": "off",
+    "no-multi-str": "error",
     "no-restricted-properties": [
       "error",
       {
         object: "Object",
         property: "assign",
-        message:
-          "Object.assign allows getting around type checking. Consider another solution.",
-      },
+        message: "Object.assign allows getting around type checking. Consider another solution.",
+      }
     ],
-    "spaced-comment": "error",
-    curly: ["error", "multi-line"],
-    "no-else-return": "error",
-    complexity: ["error", 10],
-    "no-delete-var": "error",
-    "no-empty-pattern": "error",
-    "no-multi-str": "error",
-    "no-extra-parens": "error",
     "no-self-assign": "error",
-    "max-statements-per-line": [
-      "error",
-      {
-        max: 1,
-      },
-    ],
+    "no-shadow": "off",
     "no-use-before-define": "error",
-    "max-params": ["error", 7],
-    "default-case-last": "error",
+    "object-shorthand": "error",
+    "prefer-spread": "error",
+    "prefer-template": "error",
+    "require-await": "off",
+    "sort-keys": "off",
+    "spaced-comment": "error"
   },
 };
