@@ -194,25 +194,33 @@ module.exports = {
     "sonarjs/prefer-immediate-return": "error",
     "sonarjs/prefer-while": "error",
     "complexity": ["error", 10],
-    "curly": ["error", "multi-line"],
     "default-case-last": "error",
     "max-classes-per-file": ["error", 1],
+    "max-len": [	
+      "error",	
+      {	
+        code: 120,	
+        ignoreComments: true,	
+        ignorePattern: "^(export|import)*",	
+        ignoreTemplateLiterals: true,	
+      }	
+    ],
     "max-lines-per-function": ["error", 15],
     "max-params": ["error", 7],
     "max-statements-per-line": [
       "error",
       {
         max: 1,
-      }
+      },
     ],
     "no-console": [
       "error",
       {
         "allow": [
           "warn",
-          "error"
-        ]
-      }
+          "error",
+        ],
+      },
     ],
     "no-else-return": "error",
     "no-multi-str": "error",
@@ -227,6 +235,6 @@ module.exports = {
     "no-self-assign": "error",
     "object-shorthand": "error",
     "prefer-template": "error",
-    "spaced-comment": "error"
+    "spaced-comment": "error",
   },
 };
