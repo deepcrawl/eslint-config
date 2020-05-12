@@ -13,63 +13,15 @@ module.exports = {
     "plugin:prettier/recommended",
     "prettier/@typescript-eslint",
   ],
-  overrides: [
-    {
-      files: [
-        "**/*.cdktest.ts",
-        "**/*.integration.ts",
-        "**/*.mock.ts",
-        "**/*.test.ts",
-        "**/__tests__/**",
-        "**/_generated/**/*.ts",
-      ],
-      rules: {
-        "@typescript-eslint/explicit-function-return-type": "off",
-        "@typescript-eslint/no-explicit-any": "off",
-        "@typescript-eslint/no-magic-numbers": "off",
-        "@typescript-eslint/no-non-null-assertion": "off",
-        "@typescript-eslint/no-use-before-define": "off",
-        "@typescript-eslint/require-await": "off",
-        "max-classes-per-file": "off",
-        "max-lines-per-function": "off",
-      },
-    },
-    {
-      files: ["**/migrations/**"],
-      rules: {
-        "max-lines-per-function": "off",
-      },
-    },
-  ],
   parser: "@typescript-eslint/parser",
-  parserOptions: {
-    createDefaultProgram: true,
-    ecmaVersion: 2018,
-    project: [
-      path.resolve(__dirname, "./tsconfig.json"),
-    ],
-    sourceType: "module",
-  },
   plugins: [
     "@typescript-eslint",
     "eslint-plugin-graphql",
     "eslint-plugin-jest",
+    "eslint-plugin-sonarjs",
     "prettier",
   ],
   rules: {
-    "prettier/prettier": [
-      'error',
-      {
-        printWidth: 120,
-        tabWidth: 2,
-        useTabs: false,
-        semi: true,
-        singleQuote: false,
-        trailingComma: "all",
-        bracketSpacing: true,
-        arrowParens: "avoid"
-      },
-    ],
     "@typescript-eslint/adjacent-overload-signatures": "error",
     "@typescript-eslint/array-type": [
       "error",
@@ -180,7 +132,6 @@ module.exports = {
     "@typescript-eslint/unified-signatures": "error",
     "@typescript-eslint/typedef": ["error", {
       propertyDeclaration: true,
-
     }],
     "@typescript-eslint/naming-convention": "error",
     "@typescript-eslint/ban-types": ["error", {
@@ -197,6 +148,21 @@ module.exports = {
         assertFunctionNames: ["expect", "expectCDK", "*.verify"],
       },
     ],
+    "prettier/prettier": [
+      "error",
+      {
+        printWidth: 120,
+        tabWidth: 2,
+        useTabs: false,
+        semi: true,
+        singleQuote: false,
+        trailingComma: "all",
+        bracketSpacing: true,
+        arrowParens: "avoid",
+        usePrettierrc: false,
+      },
+    ],
+    "sonarjs/prefer-while": "error",
     "max-lines-per-function": ["error", 15],
     "max-classes-per-file": ["error", 1],
     "max-len": [
