@@ -1,9 +1,4 @@
-const path = require("path");
-
 module.exports = {
-  env: {
-    node: true,
-  },
   extends: [
     "eslint:recommended",
     "plugin:@typescript-eslint/eslint-recommended",
@@ -228,7 +223,7 @@ module.exports = {
     "no-extra-parens": "error",
     "no-self-assign": "error",
     "max-statements-per-line": [
-      "error", 
+      "error",
       {
         max: 1,
       },
