@@ -1,21 +1,5 @@
-# Logs
-logs
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
-# Dependency directories
+.idea/
+.vscode/
 node_modules/
-
-# Optional npm cache directory
-.npm
-
-# Optional REPL history
-.node_repl_history
-
-# Yarn Integrity file
-.yarn-integrity
-
-#vscode
-/.vs
+.DS_Store
+*.log
