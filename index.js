@@ -19,14 +19,12 @@ module.exports = {
     "prettier",
   ],
   rules: {
-    "@typescript-eslint/adjacent-overload-signatures": "error",
     "@typescript-eslint/array-type": [
       "error",
       {
         default: "array-simple",
       },
     ],
-    "@typescript-eslint/await-thenable": "error",
     "@typescript-eslint/ban-types": [
       "error",
       {
@@ -45,7 +43,6 @@ module.exports = {
         properties: "always",
       },
     ],
-    "@typescript-eslint/class-name-casing": "error",
     "@typescript-eslint/consistent-type-assertions": [
       "error",
       {
@@ -72,7 +69,6 @@ module.exports = {
     ],
     "@typescript-eslint/generic-type-naming": ["error", "^T[A-Z][a-zA-Z]+$"],
     "@typescript-eslint/interface-name-prefix": ["error", "always"],
-    "@typescript-eslint/member-ordering": "off",
     "@typescript-eslint/naming-convention": "error",
     "@typescript-eslint/no-empty-function": [
       "error",
@@ -87,7 +83,6 @@ module.exports = {
         ignoreRestArgs: true,
       },
     ],
-    "@typescript-eslint/no-extraneous-class": "off",
     "@typescript-eslint/no-floating-promises": "error",
     "@typescript-eslint/no-inferrable-types": [
       "error",
@@ -101,20 +96,14 @@ module.exports = {
         ignoreNumericLiteralTypes: true,
       },
     ],
-    "@typescript-eslint/no-misused-new": "error",
-    "@typescript-eslint/no-misused-promises": "error",
-    "@typescript-eslint/no-namespace": "error",
     "@typescript-eslint/no-non-null-assertion": "error",
-    "@typescript-eslint/no-parameter-properties": "off",
     "@typescript-eslint/no-this-alias": [
       "error",
       {
         allowDestructuring: true,
       },
     ],
-    "@typescript-eslint/no-type-alias": ["off"],
     "@typescript-eslint/no-unnecessary-type-arguments": "error",
-    "@typescript-eslint/no-unnecessary-type-assertion": "error",
     "@typescript-eslint/no-unused-vars": [
       "error",
       {
@@ -122,29 +111,19 @@ module.exports = {
       },
     ],
     "@typescript-eslint/no-useless-constructor": "error",
-    "@typescript-eslint/no-var-requires": "error",
     "@typescript-eslint/prefer-for-of": "error",
     "@typescript-eslint/prefer-function-type": "error",
-    "@typescript-eslint/prefer-includes": "error",
-    "@typescript-eslint/prefer-namespace-keyword": "error",
     "@typescript-eslint/prefer-nullish-coalescing": "error",
     "@typescript-eslint/prefer-optional-chain": "error",
-    "@typescript-eslint/prefer-readonly": "off",
-    "@typescript-eslint/prefer-string-starts-ends-with": "error",
-    "@typescript-eslint/promise-function-async": "off",
     "@typescript-eslint/require-array-sort-compare": "error",
-    "@typescript-eslint/require-await": "error",
     "@typescript-eslint/restrict-plus-operands": "error",
-    "@typescript-eslint/restrict-template-expressions": "off",
     "@typescript-eslint/return-await": "error",
-    "@typescript-eslint/triple-slash-reference": "error",
     "@typescript-eslint/typedef": [
       "error",
       {
         propertyDeclaration: true,
       },
     ],
-    "@typescript-eslint/unbound-method": "error",
     "@typescript-eslint/unified-signatures": "error",
     "array-func/avoid-reverse": "error",
     "clean-code/feature-envy": "error",
