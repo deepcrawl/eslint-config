@@ -35,5 +35,8 @@
   "peerDependencies": {
     "eslint": ">=7.0.0",
     "prettier": ">=2.0.5"
+  },
+  "dependencies": {
+    "eslint-plugin-no-loops": "^0.3.0"
   }
 }

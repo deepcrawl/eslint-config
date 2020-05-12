@@ -13,6 +13,7 @@ module.exports = {
     "@typescript-eslint",
     "eslint-plugin-array-func",
     "eslint-plugin-clean-code",
+    "eslint-plugin-no-loops",
     "eslint-plugin-jest",
     "eslint-plugin-sonarjs",
     "prettier",
@@ -153,6 +154,7 @@ module.exports = {
         assertFunctionNames: ["expect", "expectCDK", "*.verify"],
       },
     ],
+    "no-loops/no-loops": "error",
     "prettier/prettier": [
       "error",
       {
@@ -240,6 +242,7 @@ module.exports = {
     "no-shadow": "off",
     "no-use-before-define": "error",
     "object-shorthand": "error",
+    "prefer-const": "error",
     "prefer-spread": "error",
     "prefer-template": "error",
     "require-await": "off",
