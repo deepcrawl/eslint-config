@@ -1,7 +1,7 @@
 {
   "name": "@deepcrawl/eslint-config",
   "version": "0.1.0",
-  "description": "ESLint rules used by DeepCrawl developers.",
+  "description": "ESLint rules recommended by DeepCrawl.",
   "homepage": "https://github.com/deepcrawl/eslint-config",
   "bugs": {
     "url": "https://github.com/deepcrawl/eslint-config/issues"
