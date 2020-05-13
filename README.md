@@ -35,4 +35,4 @@ Update your `.eslintrc` configuration:
 
 ## Recommendations
 
-- Enable compiler options `--noImplicitAny` / `--strictPropertyInitialization` (@typescript-eslint/typedef property is not enabled)
+- Enable compiler options `--noImplicitAny` / `--strictPropertyInitialization` (@typescript-eslint/typedef rule is not enabled)
