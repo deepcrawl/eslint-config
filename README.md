@@ -35,4 +35,15 @@ Update your `.eslintrc` configuration:
 
 ## Recommendations
 
-- Enable compiler options `--noImplicitAny` / `--strictPropertyInitialization` (@typescript-eslint/typedef rule is not enabled)
+Have these options enabled in your `tsconfig.json` file:
+
+```json
+{
+  "compilerOptions": {
+    "noImplicitAny": true,
+    "strictPropertyInitialization": true
+  }
+}
+```
+
+or enable `@typescript-eslint/typedef` rule.
