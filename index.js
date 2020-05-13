@@ -180,15 +180,7 @@ module.exports = {
         max: 1,
       },
     ],
-    "no-console": [
-      "error",
-      {
-        "allow": [
-          "warn",
-          "error",
-        ],
-      },
-    ],
+    "no-console": "error",
     "no-else-return": "error",
     "no-multi-str": "error",
     "no-restricted-properties": [
