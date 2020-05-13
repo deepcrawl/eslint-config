@@ -120,12 +120,7 @@ module.exports = {
     "@typescript-eslint/unified-signatures": "error",
     "array-func/avoid-reverse": "error",
     "clean-code/feature-envy": "error",
-    "jest/expect-expect": [
-      "error",
-      {
-        assertFunctionNames: ["expect", "expectCDK", "*.verify"],
-      },
-    ],
+    "jest/expect-expect": "error",
     "no-loops/no-loops": "error",
     "prettier/prettier": [
       "error",
