@@ -4,7 +4,7 @@ ESLint rules recommended by DeepCrawl.
 
 ## Installation
 
-Add dependency and peer dependencies to your `package.json` dev dependencies:
+Add `@deepcrawl/eslint-config` and its peer dependencies to your `package.json`:
 
 ```json
 {
