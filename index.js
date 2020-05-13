@@ -111,12 +111,6 @@ module.exports = {
     "@typescript-eslint/require-array-sort-compare": "error",
     "@typescript-eslint/restrict-plus-operands": "error",
     "@typescript-eslint/return-await": "error",
-    "@typescript-eslint/typedef": [
-      "error",
-      {
-        propertyDeclaration: true,
-      },
-    ],
     "@typescript-eslint/unified-signatures": "error",
     "array-func/avoid-reverse": "error",
     "clean-code/feature-envy": "error",

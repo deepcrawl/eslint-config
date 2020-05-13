@@ -32,3 +32,7 @@ Update your `.eslintrc` configuration:
   "extends": ["@deepcrawl/eslint-config"]
 }
 ```
+
+## Recommendations
+
+- Enable compiler options `--noImplicitAny` / `--strictPropertyInitialization` (@typescript-eslint/typedef property is not enabled)
