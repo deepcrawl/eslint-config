@@ -32,7 +32,3 @@ Update your `.eslintrc` configuration:
   "extends": ["@deepcrawl/eslint-config"]
 }
 ```
-
-## Known issues in current release
-
-- [MINOR] @typescript-eslint/parser blocked at 2.31.0, due to https://github.com/typescript-eslint/typescript-eslint/issues/2009
