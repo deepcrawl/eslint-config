@@ -154,7 +154,7 @@ module.exports = {
     "sonarjs/no-redundant-boolean": "error",
     "sonarjs/no-redundant-jump": "error",
     "sonarjs/no-same-line-conditional": "error",
-    "sonarjs/no-small-swtich": "error",
+    "sonarjs/no-small-switch": "error",
     "sonarjs/no-unused-collection": "error",
     "sonarjs/no-use-of-empty-return-value": "error",
     "sonarjs/no-useless-catch": "error",
@@ -163,14 +163,14 @@ module.exports = {
     "complexity": ["error", 10],
     "default-case-last": "error",
     "max-classes-per-file": ["error", 1],
-    "max-len": [	
-      "error",	
-      {	
-        code: 120,	
-        ignoreComments: true,	
-        ignorePattern: "^(export|import)*",	
-        ignoreTemplateLiterals: true,	
-      }	
+    "max-len": [
+      "error",
+      {
+        code: 120,
+        ignoreComments: true,
+        ignorePattern: "^(export|import)*",
+        ignoreTemplateLiterals: true,
+      }
     ],
     "max-lines-per-function": ["error", 15],
     "max-params": ["error", 7],
