@@ -36,13 +36,6 @@ module.exports = {
         },
       },
     ],
-    "@typescript-eslint/camelcase": [
-      "error",
-      {
-        allow: ["must_not"],
-        properties: "always",
-      },
-    ],
     "@typescript-eslint/consistent-type-assertions": [
       "error",
       {
