@@ -119,6 +119,13 @@ module.exports = {
     "clean-code/feature-envy": "error",
     "import/no-relative-parent-imports": "error",
     "import/no-deprecated": "warn",
+    "import/no-unused-modules": [
+      "error",
+      {
+        missingExports: true,
+        unusedExports: true,
+      },
+    ],
     "jest/expect-expect": "error",
     "no-loops/no-loops": "error",
     "prettier/prettier": [
