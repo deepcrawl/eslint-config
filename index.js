@@ -117,6 +117,7 @@ module.exports = {
     "@typescript-eslint/unified-signatures": "error",
     "array-func/avoid-reverse": "error",
     "clean-code/feature-envy": "error",
+    "import/no-default-export": "error",
     "import/no-relative-parent-imports": "error",
     "import/no-deprecated": "warn",
     "import/no-unused-modules": [
