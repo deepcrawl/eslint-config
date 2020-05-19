@@ -118,6 +118,7 @@ module.exports = {
     "array-func/avoid-reverse": "error",
     "clean-code/feature-envy": "error",
     "import/no-relative-parent-imports": "error",
+    "import/no-deprecated": "warn",
     "jest/expect-expect": "error",
     "no-loops/no-loops": "error",
     "prettier/prettier": [
