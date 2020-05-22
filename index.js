@@ -1,7 +1,6 @@
 module.exports = {
   extends: [
     "eslint:recommended",
-    "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:@typescript-eslint/recommended-requiring-type-checking",
     "plugin:eslint-plugin-import/recommended",
@@ -27,17 +26,7 @@ module.exports = {
         default: "array-simple",
       },
     ],
-    "@typescript-eslint/ban-types": [
-      "error",
-      {
-        types: {
-          Object: "Avoid using the `Object` type. Did you mean `object`?",
-          Boolean: "Avoid using the `Boolean` type. Did you mean `boolean`?",
-          Number: "Avoid using the `Number` type. Did you mean `number`?",
-          String: "Avoid using the `String` type. Did you mean `string`?",
-        },
-      },
-    ],
+    "@typescript-eslint/ban-types": "error",
     "@typescript-eslint/consistent-type-assertions": [
       "error",
       {
@@ -62,8 +51,6 @@ module.exports = {
         },
       },
     ],
-    "@typescript-eslint/generic-type-naming": ["error", "^T[A-Z][a-zA-Z]+$"],
-    "@typescript-eslint/interface-name-prefix": ["error", "always"],
     "@typescript-eslint/naming-convention": "error",
     "@typescript-eslint/no-empty-function": [
       "error",
