@@ -29,6 +29,7 @@ module.exports = {
     "@typescript-eslint/ban-types": [
       "error",
       {
+        extendDefaults: false,
         types: {
           String: {
             message: "Use string instead",
