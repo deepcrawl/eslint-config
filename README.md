@@ -9,7 +9,7 @@ Add `@deepcrawl/eslint-config` and its peer dependencies to your `package.json`:
 ```json
 {
   "devDependencies": {
-    "@deepcrawl/eslint-config": "^0.1.0",
+    "@deepcrawl/eslint-config": "^1.2.0",
     "@typescript-eslint/eslint-plugin": "^2.34.0",
     "eslint": "^7.0.0",
     "eslint-plugin-array-func": "^3.1.5",
