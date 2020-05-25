@@ -67,3 +67,5 @@ Apart from ESLint, it is recommended to use the following Prettier configuration
   "useTabs": false
 }
 ```
+
+with `lint-staged` pre-commit hook done via `husky`.
