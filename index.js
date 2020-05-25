@@ -106,6 +106,10 @@ module.exports = {
         trailingUnderscore: "allow",
       },
       {
+        selector: "function",
+        format: ["camelCase", "PascalCase"],
+      },
+      {
         selector: "property",
         format: ["camelCase", "PascalCase", "UPPER_CASE"],
         leadingUnderscore: "allow",
