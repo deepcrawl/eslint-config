@@ -163,6 +163,7 @@ module.exports = {
     "@typescript-eslint/prefer-optional-chain": "error",
     "@typescript-eslint/prefer-string-starts-ends-with": "error",
     "@typescript-eslint/require-array-sort-compare": "error",
+    "@typescript-eslint/restrict-template-expressions": "off",
     "@typescript-eslint/return-await": "error",
     "@typescript-eslint/unified-signatures": "error",
     "array-func/avoid-reverse": "error",
