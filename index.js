@@ -104,7 +104,6 @@ module.exports = {
         },
       },
     ],
-    "@typescript-eslint/member-delimiter-style": "error",
     "@typescript-eslint/naming-convention": [
       "error",
       {
@@ -131,6 +130,7 @@ module.exports = {
         ignoreRestArgs: true,
       },
     ],
+    "@typescript-eslint/no-extra-semi": "off",
     "@typescript-eslint/no-inferrable-types": [
       "error",
       {
