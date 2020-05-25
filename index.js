@@ -94,14 +94,30 @@ module.exports = {
     "@typescript-eslint/naming-convention": [
       "error",
       {
-        "selector": "interface",
-        "format": ["PascalCase"],
-        "prefix": ["I"]
+        selector: "default",
+        format: ["camelCase"],
+        leadingUnderscore: "allow",
+        trailingUnderscore: "allow",
       },
       {
-        "selector": "typeParameter",
-        "format": ["PascalCase"],
-        "prefix": ["T"]
+        selector: "variable",
+        format: ["camelCase", "UPPER_CASE"],
+        leadingUnderscore: "allow",
+        trailingUnderscore: "allow",
+      },
+      {
+        selector: "typeLike",
+        format: ["PascalCase"],
+      },
+      {
+        selector: "interface",
+        format: ["PascalCase"],
+        prefix: ["I"]
+      },
+      {
+        selector: "typeParameter",
+        format: ["PascalCase"],
+        prefix: ["T"]
       },
     ],
     "@typescript-eslint/no-empty-function": [
