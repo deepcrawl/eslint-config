@@ -94,6 +94,10 @@ module.exports = {
     "@typescript-eslint/naming-convention": [
       "error",
       {
+        selector: "default",
+        format: ["camelCase"],
+      },
+      {
         selector: "variable",
         format: ["camelCase", "UPPER_CASE"],
         leadingUnderscore: "allow",
@@ -101,12 +105,16 @@ module.exports = {
       },
       {
         selector: "property",
-        format: ["camelCase", "UPPER_CASE"],
+        format: ["camelCase", "PascalCase", "UPPER_CASE"],
         leadingUnderscore: "allow",
         trailingUnderscore: "allow",
+      },
+      {
+        selector: "property",
+        format: null,
         filter: {
-          regex: "[- ]",
-          match: false,
+          regex: "[- :]",
+          match: true,
         },
       },
       {
