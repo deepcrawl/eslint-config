@@ -110,6 +110,10 @@ module.exports = {
         format: ["camelCase", "UPPER_CASE"],
         leadingUnderscore: "allow",
         trailingUnderscore: "allow",
+        "filter": {
+          "regex": "[- ]",
+          "match": false,
+        },
       },
       {
         selector: "typeLike",
