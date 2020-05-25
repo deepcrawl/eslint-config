@@ -34,6 +34,8 @@ Update your `.eslintrc` configuration:
 
 ## Recommendations
 
+### TypeScript
+
 Have these options enabled in your `tsconfig.json` file:
 
 ```json
@@ -46,3 +48,22 @@ Have these options enabled in your `tsconfig.json` file:
 ```
 
 or enable `@typescript-eslint/typedef` rule.
+
+### Prettier
+
+Apart from ESLint, it is recommended to use the following Prettier configuration:
+
+```json
+{
+  "arrowParens": "avoid",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "printWidth": 120,
+  "quoteProps": "as-needed",
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "all",
+  "useTabs": false
+}
+```
