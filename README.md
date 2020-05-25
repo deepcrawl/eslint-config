@@ -17,9 +17,7 @@ Add `@deepcrawl/eslint-config` and its peer dependencies to your `package.json`:
     "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-jest": "^23.13.1",
     "eslint-plugin-no-loops": "^0.3.0",
-    "eslint-plugin-prettier": "^3.1.3",
-    "eslint-plugin-sonarjs": "^0.5.0",
-    "prettier": "^2.0.5"
+    "eslint-plugin-sonarjs": "^0.5.0"
   }
 }
 ```
