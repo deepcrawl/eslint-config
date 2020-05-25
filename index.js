@@ -48,15 +48,6 @@ module.exports = {
             fixWith: "symbol",
           },
 
-          Function: {
-            message: [
-              'The `Function` type accepts any function-like value.',
-              'It provides no type safety when calling the function, which can be a common source of bugs.',
-              'It also accepts things like class declarations, which will throw at runtime as they will not be called with `new`.',
-              'If you are expecting the function to accept certain arguments, you should explicitly define the function shape.',
-            ].join('\n'),
-          },
-
           // object typing
           Object: {
             message: [
