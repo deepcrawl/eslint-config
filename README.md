@@ -10,12 +10,12 @@ Add `@deepcrawl/eslint-config` and its peer dependencies to your `package.json`:
 {
   "devDependencies": {
     "@deepcrawl/eslint-config": "^0.1.0",
-    "@typescript-eslint/eslint-plugin": "^2.34.0",
+    "@typescript-eslint/eslint-plugin": "^3.0.0",
     "eslint": "^7.0.0",
-    "eslint-plugin-array-func": "^3.1.5",
+    "eslint-plugin-array-func": "^3.1.6",
     "eslint-plugin-clean-code": "^0.1.12",
     "eslint-plugin-import": "^2.20.2",
-    "eslint-plugin-jest": "^23.9.0",
+    "eslint-plugin-jest": "^23.13.1",
     "eslint-plugin-no-loops": "^0.3.0",
     "eslint-plugin-prettier": "^3.1.3",
     "eslint-plugin-sonarjs": "^0.5.0",

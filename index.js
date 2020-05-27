@@ -1,7 +1,6 @@
 module.exports = {
   extends: [
     "eslint:recommended",
-    "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:@typescript-eslint/recommended-requiring-type-checking",
     "plugin:eslint-plugin-import/recommended",
@@ -30,11 +29,40 @@ module.exports = {
     "@typescript-eslint/ban-types": [
       "error",
       {
+        extendDefaults: false,
         types: {
-          Object: "Avoid using the `Object` type. Did you mean `object`?",
-          Boolean: "Avoid using the `Boolean` type. Did you mean `boolean`?",
-          Number: "Avoid using the `Number` type. Did you mean `number`?",
-          String: "Avoid using the `String` type. Did you mean `string`?",
+          String: {
+            message: "Use string instead",
+            fixWith: "string",
+          },
+          Boolean: {
+            message: "Use boolean instead",
+            fixWith: "boolean",
+          },
+          Number: {
+            message: "Use number instead",
+            fixWith: "number",
+          },
+          Symbol: {
+            message: "Use symbol instead",
+            fixWith: "symbol",
+          },
+
+          // object typing
+          Object: {
+            message: [
+              'The `Object` type actually means "any non-nullish value", so it is marginally better than `unknown`.',
+              '- If you want a type meaning "any object", you probably want `Record<string, unknown>` instead.',
+              '- If you want a type meaning "any value", you probably want `unknown` instead.',
+            ].join('\n'),
+          },
+          '{}': {
+            message: [
+              '`{}` actually means "any non-nullish value".',
+              '- If you want a type meaning "any object", you probably want `Record<string, unknown>` instead.',
+              '- If you want a type meaning "any value", you probably want `unknown` instead.',
+            ].join('\n'),
+          },
         },
       },
     ],
@@ -62,9 +90,58 @@ module.exports = {
         },
       },
     ],
-    "@typescript-eslint/generic-type-naming": ["error", "^T[A-Z][a-zA-Z]+$"],
-    "@typescript-eslint/interface-name-prefix": ["error", "always"],
-    "@typescript-eslint/naming-convention": "error",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/naming-convention": [
+      "error",
+      {
+        selector: "default",
+        format: ["camelCase"],
+        leadingUnderscore: "allow",
+        trailingUnderscore: "allow",
+      },
+      {
+        selector: "variable",
+        format: ["camelCase", "PascalCase", "UPPER_CASE"],
+        leadingUnderscore: "allow",
+        trailingUnderscore: "allow",
+      },
+      {
+        selector: "function",
+        format: ["camelCase", "PascalCase"],
+      },
+      {
+        selector: "property",
+        format: ["camelCase", "PascalCase", "UPPER_CASE"],
+        leadingUnderscore: "allow",
+        trailingUnderscore: "allow",
+      },
+      {
+        selector: "property",
+        format: null,
+        filter: {
+          regex: "[- :]",
+          match: true,
+        },
+      },
+      {
+        selector: "enumMember",
+        format: ["camelCase", "PascalCase"],
+      },
+      {
+        selector: "typeLike",
+        format: ["PascalCase"],
+      },
+      {
+        selector: "interface",
+        format: ["PascalCase"],
+        prefix: ["I"]
+      },
+      {
+        selector: "typeParameter",
+        format: ["PascalCase"],
+        prefix: ["T"]
+      },
+    ],
     "@typescript-eslint/no-empty-function": [
       "error",
       {
@@ -78,7 +155,7 @@ module.exports = {
         ignoreRestArgs: true,
       },
     ],
-    "@typescript-eslint/no-floating-promises": "error",
+    "@typescript-eslint/no-extra-semi": "off",
     "@typescript-eslint/no-inferrable-types": [
       "error",
       {
@@ -99,20 +176,25 @@ module.exports = {
       },
     ],
     "@typescript-eslint/no-unnecessary-type-arguments": "error",
+    "@typescript-eslint/no-unsafe-assignment": "off",
+    "@typescript-eslint/no-unsafe-call": "off",
+    "@typescript-eslint/no-unsafe-member-access": "off",
+    "@typescript-eslint/no-unsafe-return": "off",
     "@typescript-eslint/no-unused-vars": [
       "error",
       {
         argsIgnorePattern: "^_",
       },
     ],
-    "@typescript-eslint/no-use-before-define": "off",
     "@typescript-eslint/no-useless-constructor": "error",
     "@typescript-eslint/prefer-for-of": "error",
     "@typescript-eslint/prefer-function-type": "error",
+    "@typescript-eslint/prefer-includes": "error",
     "@typescript-eslint/prefer-nullish-coalescing": "error",
     "@typescript-eslint/prefer-optional-chain": "error",
+    "@typescript-eslint/prefer-string-starts-ends-with": "error",
     "@typescript-eslint/require-array-sort-compare": "error",
-    "@typescript-eslint/restrict-plus-operands": "error",
+    "@typescript-eslint/restrict-template-expressions": "off",
     "@typescript-eslint/return-await": "error",
     "@typescript-eslint/unified-signatures": "error",
     "array-func/avoid-reverse": "error",
