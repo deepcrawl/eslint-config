@@ -6,7 +6,7 @@ module.exports = {
     "plugin:eslint-plugin-import/recommended",
     "plugin:eslint-plugin-import/typescript",
     "plugin:eslint-plugin-jest/recommended",
-    "plugin:prettier/recommended",
+    "eslint-config-prettier",
     "prettier/@typescript-eslint",
   ],
   parser: "@typescript-eslint/parser",
@@ -17,7 +17,6 @@ module.exports = {
     "eslint-plugin-no-loops",
     "eslint-plugin-jest",
     "eslint-plugin-sonarjs",
-    "prettier",
   ],
   rules: {
     "@typescript-eslint/array-type": [
@@ -155,7 +154,6 @@ module.exports = {
         ignoreRestArgs: true,
       },
     ],
-    "@typescript-eslint/no-extra-semi": "off",
     "@typescript-eslint/no-inferrable-types": [
       "error",
       {
@@ -221,22 +219,6 @@ module.exports = {
     ],
     "jest/expect-expect": "error",
     "no-loops/no-loops": "error",
-    "prettier/prettier": [
-      "error",
-      {
-        arrowParens: "avoid",
-        bracketSpacing: true,
-        printWidth: 120,
-        semi: true,
-        singleQuote: false,
-        tabWidth: 2,
-        trailingComma: "all",
-        useTabs: false,
-      },
-      {
-        usePrettierrc: false,
-      },
-    ],
     "sonarjs/cognitive-complexity": ["error", 8],
     "sonarjs/max-switch-cases": "error",
     "sonarjs/no-all-duplicated-branches": "error",
