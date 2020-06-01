@@ -6,6 +6,7 @@ module.exports = {
     "plugin:eslint-plugin-import/recommended",
     "plugin:eslint-plugin-import/typescript",
     "plugin:eslint-plugin-jest/recommended",
+    "plugin:eslint-plugin-promise/recommended",
     "eslint-config-prettier",
     "prettier/@typescript-eslint",
   ],
@@ -16,6 +17,7 @@ module.exports = {
     "eslint-plugin-clean-code",
     "eslint-plugin-no-loops",
     "eslint-plugin-jest",
+    "eslint-plugin-promise",
     "eslint-plugin-sonarjs",
   ],
   rules: {
@@ -219,6 +221,7 @@ module.exports = {
     ],
     "jest/expect-expect": "error",
     "no-loops/no-loops": "error",
+    "promise/prefer-await-to-then": "error",
     "sonarjs/cognitive-complexity": ["error", 8],
     "sonarjs/max-switch-cases": "error",
     "sonarjs/no-all-duplicated-branches": "error",
