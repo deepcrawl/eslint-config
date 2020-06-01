@@ -15,6 +15,7 @@ yarn add --dev \
   eslint-plugin-clean-code@^0.1.12 \
   eslint-plugin-import@^2.20.2 \
   eslint-plugin-jest@^23.13.1 \
+  eslint-plugin-json-format@^2.0.1 \
   eslint-plugin-no-loops@^0.3.0 \
   eslint-plugin-promise@^4.2.1 \
   eslint-plugin-sonarjs@^0.5.0

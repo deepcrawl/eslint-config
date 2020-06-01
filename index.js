@@ -17,6 +17,7 @@ module.exports = {
     "eslint-plugin-clean-code",
     "eslint-plugin-no-loops",
     "eslint-plugin-jest",
+    "eslint-plugin-json-format",
     "eslint-plugin-promise",
     "eslint-plugin-sonarjs",
   ],
@@ -279,5 +280,10 @@ module.exports = {
     "object-shorthand": "error",
     "prefer-template": "error",
     "spaced-comment": "error",
+  },
+  settings: {
+    "json/sort-package-json": "standard",
+    "json/ignore-files": [],
+    "json/json-with-comments-files": [],
   },
 };
