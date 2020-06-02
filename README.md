@@ -2,6 +2,14 @@
 
 ESLint rules recommended by DeepCrawl.
 
+## Prerequisites
+
+[Configure npm for use with GitHub Packages](https://help.github.com/en/packages/using-github-packages-with-your-projects-ecosystem/configuring-npm-for-use-with-github-packages#installing-a-package) by adding the following line to your `~/.npmrc` file:
+
+```
+@deepcrawl:registry=https://npm.pkg.github.com/
+```
+
 ## Installation
 
 Add `@deepcrawl/eslint-config` and its peer dependencies to your `package.json`:
@@ -28,6 +36,16 @@ Update your `.eslintrc` configuration:
 ```json
 {
   "extends": ["@deepcrawl/eslint-config"]
+}
+```
+
+If you are using tsconfig paths, you also need to let `eslint-plugin-import` know, which imports should it consider internal, for example:
+
+```json
+{
+  "settings": {
+    "import/internal-regex": "^@(src|test)/"
+  }
 }
 ```
 
