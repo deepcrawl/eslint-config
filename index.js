@@ -15,6 +15,7 @@ module.exports = {
     "@typescript-eslint",
     "eslint-plugin-array-func",
     "eslint-plugin-clean-code",
+    "eslint-plugin-filenames",
     "eslint-plugin-no-loops",
     "eslint-plugin-jest",
     "eslint-plugin-json-format",
@@ -200,6 +201,8 @@ module.exports = {
     "@typescript-eslint/unified-signatures": "error",
     "array-func/avoid-reverse": "error",
     "clean-code/feature-envy": "error",
+    "filenames/match-exported": ["error", "kebab"],
+    "filenames/match-regex": ["error", "^([a-z0-9]+)(-[a-z0-9]+)*(\.[a-z]+)*$"],
     "import/default": "off",
     "import/named": "off",
     "import/namespace": "off",
@@ -281,6 +284,14 @@ module.exports = {
     "prefer-template": "error",
     "spaced-comment": "error",
   },
+  overrides: [
+    {
+      files: ["**/.eslintrc.js"],
+      rules: {
+        "filenames/match-regex": "off",
+      },
+    },
+  ],
   settings: {
     "json/sort-package-json": "standard",
     "json/ignore-files": [],
