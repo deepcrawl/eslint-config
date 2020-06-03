@@ -201,7 +201,6 @@ module.exports = {
     "@typescript-eslint/unified-signatures": "error",
     "array-func/avoid-reverse": "error",
     "clean-code/feature-envy": "error",
-    "filenames/match-exported": ["error", "kebab"],
     "filenames/match-regex": ["error", "^([a-z0-9]+)(-[a-z0-9]+)*(\.[a-z]+)*$"],
     "import/default": "off",
     "import/named": "off",
