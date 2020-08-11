@@ -1,5 +1,5 @@
 {
-  "name": "@deepcrawl/eslint-config",
+  "name": "deepcrawl-eslint-config",
   "version": "0.1.0",
   "description": "ESLint rules recommended by DeepCrawl.",
   "homepage": "https://github.com/deepcrawl/eslint-config",
@@ -17,7 +17,7 @@
     "url": "ssh://git@github.com/deepcrawl/eslint-config.git"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
+    "registry": "https://registry.npmjs.org/"
   },
   "scripts": {},
   "dependencies": {

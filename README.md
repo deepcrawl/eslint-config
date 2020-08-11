@@ -1,22 +1,14 @@
 # eslint-config
 
-ESLint rules recommended by DeepCrawl.
-
-## Prerequisites
-
-[Configure npm for use with GitHub Packages](https://help.github.com/en/packages/using-github-packages-with-your-projects-ecosystem/configuring-npm-for-use-with-github-packages#installing-a-package) by adding the following line to your `~/.npmrc` file:
-
-```
-@deepcrawl:registry=https://npm.pkg.github.com/
-```
+ESLint rules used by DeepCrawl.
 
 ## Installation
 
-Add `@deepcrawl/eslint-config` and its peer dependencies to your `package.json`:
+Add `deepcrawl-eslint-config` and its peer dependencies to your `package.json`:
 
 ```shell
 yarn add --dev \
-  @deepcrawl/eslint-config \
+  deepcrawl-eslint-config \
   @typescript-eslint/eslint-plugin@^3.0.2 \
   eslint@^7.0.0 \
   eslint-plugin-array-func@^3.1.6 \
@@ -36,7 +28,7 @@ Update your `.eslintrc` configuration:
 
 ```json
 {
-  "extends": ["@deepcrawl/eslint-config"]
+  "extends": ["deepcrawl-eslint-config"]
 }
 ```
 
