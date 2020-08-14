@@ -9,13 +9,13 @@ Add `eslint-config-deepcrawl` and its peer dependencies to your `package.json`:
 ```shell
 yarn add --dev \
   eslint-config-deepcrawl \
-  @typescript-eslint/eslint-plugin@^3.0.2 \
-  eslint@^7.0.0 \
-  eslint-plugin-array-func@^3.1.6 \
+  @typescript-eslint/eslint-plugin@^3.9.0 \
+  eslint@^7.6.0 \
+  eslint-plugin-array-func@^3.1.7 \
   eslint-plugin-clean-code@^0.1.12 \
   eslint-plugin-filenames@^1.3.2 \
-  eslint-plugin-import@^2.20.2 \
-  eslint-plugin-jest@^23.13.1 \
+  eslint-plugin-import@^2.22.0 \
+  eslint-plugin-jest@^23.20.0 \
   eslint-plugin-json-format@^2.0.1 \
   eslint-plugin-no-loops@^0.3.0 \
   eslint-plugin-promise@^4.2.1 \
