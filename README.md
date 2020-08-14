@@ -4,11 +4,11 @@ ESLint rules used by DeepCrawl.
 
 ## Installation
 
-Add `deepcrawl-eslint-config` and its peer dependencies to your `package.json`:
+Add `eslint-config-deepcrawl` and its peer dependencies to your `package.json`:
 
 ```shell
 yarn add --dev \
-  deepcrawl-eslint-config \
+  eslint-config-deepcrawl \
   @typescript-eslint/eslint-plugin@^3.0.2 \
   eslint@^7.0.0 \
   eslint-plugin-array-func@^3.1.6 \
@@ -28,7 +28,7 @@ Update your `.eslintrc` configuration:
 
 ```json
 {
-  "extends": ["deepcrawl-eslint-config"]
+  "extends": ["deepcrawl"]
 }
 ```
 
