@@ -226,6 +226,12 @@ module.exports = {
     "jest/expect-expect": "error",
     "no-loops/no-loops": "error",
     "node/no-missing-import": "off",
+    "node/no-unsupported-features/es-syntax": [
+      "error",
+      {
+        ignores: ["modules"],
+      },
+    ],
     "promise/prefer-await-to-then": "error",
     "sonarjs/cognitive-complexity": ["error", 8],
     "sonarjs/max-switch-cases": "error",
