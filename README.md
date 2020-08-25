@@ -18,6 +18,7 @@ yarn add --dev \
   eslint-plugin-jest@^23.20.0 \
   eslint-plugin-json-format@^2.0.1 \
   eslint-plugin-no-loops@^0.3.0 \
+  eslint-plugin-node@^11.1.0 \
   eslint-plugin-promise@^4.2.1 \
   eslint-plugin-sonarjs@^0.5.0
 ```
