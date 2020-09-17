@@ -110,6 +110,12 @@ module.exports = {
         trailingUnderscore: "allow",
       },
       {
+        "selector": "variable",
+        "types": ["boolean"],
+        "format": ["PascalCase"],
+        "prefix": ["are", "can", "did", "does", "do", "has", "is", "should", "was", "were", "will", "with"]
+      },
+      {
         selector: "function",
         format: ["camelCase", "PascalCase"],
       },
