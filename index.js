@@ -96,7 +96,7 @@ module.exports = {
     ],
     "@typescript-eslint/explicit-module-boundary-types": "off",
     "@typescript-eslint/naming-convention": [
-      "error",
+      "warn",
       {
         selector: "default",
         format: ["camelCase"],
@@ -108,6 +108,12 @@ module.exports = {
         format: ["camelCase", "PascalCase", "UPPER_CASE"],
         leadingUnderscore: "allow",
         trailingUnderscore: "allow",
+      },
+      {
+        "selector": "variable",
+        "types": ["boolean"],
+        "format": ["PascalCase"],
+        "prefix": ["are", "can", "did", "does", "do", "has", "is", "should", "was", "were", "will", "with"]
       },
       {
         selector: "function",
