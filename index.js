@@ -273,7 +273,15 @@ module.exports = {
         ignoreTemplateLiterals: true,
       }
     ],
-    "max-lines-per-function": ["error", 15],
+    "max-lines-per-function": [
+      "error",
+      {
+        max: 20,
+        skipBlankLines: true,
+        skipComments: true,
+        IIFEs: true
+      },
+    ],
     "max-params": ["error", 7],
     "max-statements-per-line": [
       "error",
