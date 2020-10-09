@@ -67,6 +67,12 @@ module.exports = {
               '- If you want a type meaning "any value", you probably want `unknown` instead.',
             ].join('\n'),
           },
+          object: {
+            message: [
+              'The `object` type is currently hard to use ([see this issue](https://github.com/microsoft/TypeScript/issues/21732)).',
+              'Consider using `Record<string, unknown>` instead, as it allows you to more easily inspect and use the keys.',
+            ].join('\n'),
+          },
         },
       },
     ],
