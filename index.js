@@ -119,7 +119,7 @@ module.exports = {
         "selector": "variable",
         "types": ["boolean"],
         "format": ["PascalCase"],
-        "prefix": ["are", "can", "did", "does", "do", "has", "is", "should", "was", "were", "will", "with"]
+        "prefix": ["are", "can", "did", "does", "do", "has", "is", "not", "should", "was", "were", "will", "with"]
       },
       {
         selector: "function",
