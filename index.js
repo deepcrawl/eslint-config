@@ -9,7 +9,7 @@ module.exports = {
     "plugin:eslint-plugin-promise/recommended",
     "plugin:node/recommended",
     "eslint-config-prettier",
-    "prettier/@typescript-eslint",
+    "prettier",
   ],
   parser: "@typescript-eslint/parser",
   plugins: [
@@ -23,6 +23,7 @@ module.exports = {
     "eslint-plugin-promise",
     "eslint-plugin-sonarjs",
   ],
+  reportUnusedDisableDirectives: true,
   rules: {
     "@typescript-eslint/array-type": [
       "error",
@@ -183,6 +184,7 @@ module.exports = {
         ignoreNumericLiteralTypes: true,
       },
     ],
+    "@typescript-eslint/no-non-null-asserted-nullish-coalescing": "error",
     "@typescript-eslint/no-non-null-assertion": "error",
     "@typescript-eslint/no-this-alias": [
       "error",
@@ -192,6 +194,7 @@ module.exports = {
     ],
     "@typescript-eslint/no-unnecessary-type-arguments": "error",
     "@typescript-eslint/no-unsafe-assignment": "off",
+    "@typescript-eslint/no-unsafe-argument": "off",
     "@typescript-eslint/no-unsafe-call": "off",
     "@typescript-eslint/no-unsafe-member-access": "off",
     "@typescript-eslint/no-unsafe-return": "off",
@@ -207,10 +210,12 @@ module.exports = {
     "@typescript-eslint/prefer-includes": "error",
     "@typescript-eslint/prefer-nullish-coalescing": "error",
     "@typescript-eslint/prefer-optional-chain": "error",
+    "@typescript-eslint/prefer-regexp-exec": "error",
     "@typescript-eslint/prefer-string-starts-ends-with": "error",
     "@typescript-eslint/require-array-sort-compare": "error",
     "@typescript-eslint/restrict-template-expressions": "off",
     "@typescript-eslint/return-await": "error",
+    "@typescript-eslint/sort-type-union-intersection-members": "error",
     "@typescript-eslint/unified-signatures": "error",
     "array-func/avoid-reverse": "error",
     "clean-code/feature-envy": "error",
@@ -222,7 +227,7 @@ module.exports = {
     "import/no-default-export": "error",
     "import/no-named-as-default": "off",
     "import/no-named-as-default-member": "off",
-    "import/no-relative-parent-imports": "error",
+    "import/no-relative-packages": "error",
     "import/no-unresolved": "off",
     "import/order": [
       "error",
@@ -236,6 +241,8 @@ module.exports = {
       },
     ],
     "jest/expect-expect": "error",
+    "jest/prefer-expect-resolves": "error",
+    "jest/prefer-to-be": "error",
     "no-loops/no-loops": "error",
     "node/no-missing-import": "off",
     "node/no-unsupported-features/es-syntax": [
@@ -280,7 +287,7 @@ module.exports = {
       }
     ],
     "max-lines-per-function": [
-      "error",
+      "warn",
       {
         max: 20,
         skipBlankLines: true,
