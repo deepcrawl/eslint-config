@@ -52,7 +52,10 @@ module.exports = {
             message: "Use symbol instead",
             fixWith: "symbol",
           },
-
+          BigInt: {
+            message: "Use bigint instead",
+            fixWith: "bigint",
+          },
           // object typing
           Object: {
             message: [
@@ -202,6 +205,7 @@ module.exports = {
       "error",
       {
         argsIgnorePattern: "^_",
+        destructuredArrayIgnorePattern: "^_",
       },
     ],
     "@typescript-eslint/no-useless-constructor": "error",
