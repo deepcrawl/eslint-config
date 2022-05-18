@@ -9,7 +9,6 @@ Add `eslint-config-deepcrawl` and its peer dependencies to your `package.json`:
 ```shell
 yarn add --dev \
   eslint-config-deepcrawl \
-  @typescript-eslint/eslint-parser@^5.25.0 \
   eslint@^8.15.0
 ```
 

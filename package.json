@@ -22,6 +22,7 @@
   "scripts": {},
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^5.25.0",
+    "@typescript-eslint/parser": "^5.25.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-array-func": "^3.1.7",
     "eslint-plugin-clean-code": "^0.1.12",
@@ -35,7 +36,6 @@
     "eslint-plugin-sonarjs": "^0.13.0"
   },
   "peerDependencies": {
-    "@typescript-eslint/parser": "^5.25.0",
     "eslint": ">=8.15.0",
     "typescript": ">=4.4"
   }
