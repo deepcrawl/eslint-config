@@ -7,24 +7,26 @@ module.exports = {
     "plugin:eslint-plugin-import/typescript",
     "plugin:eslint-plugin-jest/recommended",
     "plugin:eslint-plugin-promise/recommended",
-    "plugin:node/recommended",
+    // "plugin:node/recommended",
     "eslint-config-prettier",
     "prettier",
+    "eslint-config-airbnb-base",
+    "airbnb-typescript/base",
+    "standard-with-typescript",
   ],
   parser: "@typescript-eslint/parser",
   plugins: [
     "@typescript-eslint",
-    "eslint-plugin-array-func",
-    "eslint-plugin-clean-code",
-    "eslint-plugin-filenames",
-    "eslint-plugin-no-loops",
-    "eslint-plugin-jest",
-    "eslint-plugin-json-format",
-    "eslint-plugin-promise",
-    "eslint-plugin-sonarjs",
+    "filenames",
+    "jest",
+    "json-format",
+    "promise",
+    "sonarjs",
   ],
   reportUnusedDisableDirectives: true,
   rules: {
+    "@typescript-eslint/unbound-method": "off",
+    "@typescript-eslint/strict-boolean-expressions": "off",
     "@typescript-eslint/array-type": [
       "error",
       {
@@ -80,6 +82,7 @@ module.exports = {
         },
       },
     ],
+    "@typescript-eslint/comma-dangle": "off",
     "@typescript-eslint/consistent-type-assertions": [
       "error",
       {
@@ -216,19 +219,21 @@ module.exports = {
     "@typescript-eslint/prefer-optional-chain": "error",
     "@typescript-eslint/prefer-regexp-exec": "error",
     "@typescript-eslint/prefer-string-starts-ends-with": "error",
+    "@typescript-eslint/quotes": "off",
     "@typescript-eslint/require-array-sort-compare": "error",
     "@typescript-eslint/restrict-template-expressions": "off",
     "@typescript-eslint/return-await": "error",
+    "@typescript-eslint/semi": "off",
+    "@typescript-eslint/space-before-function-paren": "off",
     "@typescript-eslint/sort-type-union-intersection-members": "error",
     "@typescript-eslint/unified-signatures": "error",
-    "array-func/avoid-reverse": "error",
-    "clean-code/feature-envy": "error",
     "filenames/match-regex": ["error", "^([a-z0-9]+)(-[a-z0-9]+)*(\.[a-z]+)*$"],
     "import/default": "off",
     "import/named": "off",
     "import/namespace": "off",
     "import/newline-after-import": "error",
     "import/no-default-export": "error",
+    "import/no-default-export": "off",
     "import/no-named-as-default": "off",
     "import/no-named-as-default-member": "off",
     "import/no-relative-packages": "error",
@@ -247,7 +252,6 @@ module.exports = {
     "jest/expect-expect": "error",
     "jest/prefer-expect-resolves": "error",
     "jest/prefer-to-be": "error",
-    "no-loops/no-loops": "error",
     "node/no-missing-import": "off",
     "node/no-unsupported-features/es-syntax": [
       "error",
@@ -289,11 +293,11 @@ module.exports = {
         ignorePattern: "^(export|import)*",
         ignoreTemplateLiterals: true,
       }
-    ],
+    ],  
     "max-lines-per-function": [
       "warn",
       {
-        max: 20,
+        max: 50,
         skipBlankLines: true,
         skipComments: true,
         IIFEs: true
@@ -302,9 +306,7 @@ module.exports = {
     "max-params": ["error", 7],
     "max-statements-per-line": [
       "error",
-      {
-        max: 1,
-      },
+      { max: 1 },
     ],
     "no-console": "error",
     "no-else-return": "error",
@@ -321,6 +323,7 @@ module.exports = {
     "object-shorthand": "error",
     "prefer-template": "error",
     "spaced-comment": "error",
+    "no-new": "off",
   },
   overrides: [
     {
