@@ -1,8 +1,7 @@
 module.exports = {
   extends: [
     "eslint:recommended",
-    "plugin:@typescript-eslint/recommended",
-    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "plugin:@typescript-eslint/recommended-type-checked",
     "plugin:eslint-plugin-import/recommended",
     "plugin:eslint-plugin-import/typescript",
     "plugin:eslint-plugin-jest/recommended",
@@ -162,6 +161,8 @@ module.exports = {
         prefix: ["T"]
       },
     ],
+    "@typescript-eslint/no-base-to-string": "off",
+    "@typescript-eslint/no-duplicate-enum-values": "off",
     "@typescript-eslint/no-empty-function": [
       "error",
       {
@@ -196,9 +197,10 @@ module.exports = {
       },
     ],
     "@typescript-eslint/no-unnecessary-type-arguments": "error",
-    "@typescript-eslint/no-unsafe-assignment": "off",
     "@typescript-eslint/no-unsafe-argument": "off",
+    "@typescript-eslint/no-unsafe-assignment": "off",
     "@typescript-eslint/no-unsafe-call": "off",
+    "@typescript-eslint/no-unsafe-enum-comparison": "off",
     "@typescript-eslint/no-unsafe-member-access": "off",
     "@typescript-eslint/no-unsafe-return": "off",
     "@typescript-eslint/no-unused-vars": [
@@ -209,17 +211,12 @@ module.exports = {
       },
     ],
     "@typescript-eslint/no-useless-constructor": "error",
-    "@typescript-eslint/prefer-for-of": "error",
-    "@typescript-eslint/prefer-function-type": "error",
     "@typescript-eslint/prefer-includes": "error",
-    "@typescript-eslint/prefer-nullish-coalescing": "error",
-    "@typescript-eslint/prefer-optional-chain": "error",
     "@typescript-eslint/prefer-regexp-exec": "error",
-    "@typescript-eslint/prefer-string-starts-ends-with": "error",
     "@typescript-eslint/require-array-sort-compare": "error",
     "@typescript-eslint/restrict-template-expressions": "off",
     "@typescript-eslint/return-await": "error",
-    "@typescript-eslint/sort-type-union-intersection-members": "error",
+    "@typescript-eslint/sort-type-constituents": "error",
     "@typescript-eslint/unified-signatures": "error",
     "array-func/avoid-reverse": "error",
     "clean-code/feature-envy": "error",
