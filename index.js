@@ -2,7 +2,6 @@ module.exports = {
   extends: [
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended-type-checked",
-    "plugin:@typescript-eslint/stylistic-type-checked",
     "plugin:eslint-plugin-import/recommended",
     "plugin:eslint-plugin-import/typescript",
     "plugin:eslint-plugin-jest/recommended",
