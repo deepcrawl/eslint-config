@@ -161,6 +161,8 @@ module.exports = {
         prefix: ["T"]
       },
     ],
+    "@typescript-eslint/no-base-to-string": "off",
+    "@typescript-eslint/no-duplicate-enum-values": "off",
     "@typescript-eslint/no-empty-function": [
       "error",
       {
@@ -198,6 +200,7 @@ module.exports = {
     "@typescript-eslint/no-unsafe-argument": "off",
     "@typescript-eslint/no-unsafe-assignment": "off",
     "@typescript-eslint/no-unsafe-call": "off",
+    "@typescript-eslint/no-unsafe-enum-comparison": "off",
     "@typescript-eslint/no-unsafe-member-access": "off",
     "@typescript-eslint/no-unsafe-return": "off",
     "@typescript-eslint/no-unused-vars": [
