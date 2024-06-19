@@ -6,8 +6,8 @@ module.exports = {
     "plugin:import/typescript",
     "plugin:jest/recommended",
     "plugin:jest-formatting/recommended",
-    "plugin:promise/recommended",
     "plugin:n/recommended",
+    "plugin:promise/recommended",
     "eslint-config-prettier",
     "prettier",
   ],
@@ -16,7 +16,6 @@ module.exports = {
     "@typescript-eslint",
     "array-func",
     "clean-code",
-    "filenames",
     "no-loops",
     "jest",
     "jest-formatting",
@@ -222,7 +221,6 @@ module.exports = {
     "@typescript-eslint/unified-signatures": "error",
     "array-func/avoid-reverse": "error",
     "clean-code/feature-envy": "error",
-    "filenames/match-regex": ["error", "^([a-z0-9]+)(-[a-z0-9]+)*(\.[a-z]+)*$"],
     "import/default": "off",
     "import/named": "off",
     "import/namespace": "off",
@@ -327,14 +325,6 @@ module.exports = {
     "prefer-template": "error",
     "spaced-comment": "error",
   },
-  overrides: [
-    {
-      files: ["**/.eslintrc.js"],
-      rules: {
-        "filenames/match-regex": "off",
-      },
-    },
-  ],
   settings: {
     "json/sort-package-json": "standard",
     "json/ignore-files": [],
