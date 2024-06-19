@@ -7,7 +7,7 @@ module.exports = {
     "plugin:jest/recommended",
     "plugin:jest-formatting/recommended",
     "plugin:promise/recommended",
-    "plugin:node/recommended",
+    "plugin:n/recommended",
     "eslint-config-prettier",
     "prettier",
   ],
@@ -247,8 +247,8 @@ module.exports = {
     "jest/prefer-expect-resolves": "error",
     "jest/prefer-to-be": "error",
     "no-loops/no-loops": "error",
-    "node/no-missing-import": "off",
-    "node/no-unsupported-features/es-syntax": [
+    "n/no-missing-import": "off",
+    "n/no-unsupported-features/es-syntax": [
       "error",
       {
         ignores: ["modules"],
