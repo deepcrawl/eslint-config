@@ -15,7 +15,6 @@ module.exports = {
   plugins: [
     "@typescript-eslint",
     "array-func",
-    "clean-code",
     "no-loops",
     "jest",
     "jest-formatting",
@@ -220,7 +219,6 @@ module.exports = {
     "@typescript-eslint/sort-type-constituents": "error",
     "@typescript-eslint/unified-signatures": "error",
     "array-func/avoid-reverse": "error",
-    "clean-code/feature-envy": "error",
     "import/default": "off",
     "import/named": "off",
     "import/namespace": "off",
