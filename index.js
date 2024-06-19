@@ -248,6 +248,12 @@ module.exports = {
     "jest/prefer-to-be": "error",
     "no-loops/no-loops": "error",
     "n/no-missing-import": "off",
+    "n/no-unsupported-features/node-builtins": [
+      "error",
+      {
+        ignores: ["fetch", "Response", "Request"],
+      },
+    ],
     "n/no-unsupported-features/es-syntax": [
       "error",
       {
