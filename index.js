@@ -30,55 +30,6 @@ module.exports = {
         default: "array-simple",
       },
     ],
-    "@typescript-eslint/ban-types": [
-      "error",
-      {
-        extendDefaults: false,
-        types: {
-          String: {
-            message: "Use string instead",
-            fixWith: "string",
-          },
-          Boolean: {
-            message: "Use boolean instead",
-            fixWith: "boolean",
-          },
-          Number: {
-            message: "Use number instead",
-            fixWith: "number",
-          },
-          Symbol: {
-            message: "Use symbol instead",
-            fixWith: "symbol",
-          },
-          BigInt: {
-            message: "Use bigint instead",
-            fixWith: "bigint",
-          },
-          // object typing
-          Object: {
-            message: [
-              'The `Object` type actually means "any non-nullish value", so it is marginally better than `unknown`.',
-              '- If you want a type meaning "any object", you probably want `Record<string, unknown>` instead.',
-              '- If you want a type meaning "any value", you probably want `unknown` instead.',
-            ].join('\n'),
-          },
-          '{}': {
-            message: [
-              '`{}` actually means "any non-nullish value".',
-              '- If you want a type meaning "any object", you probably want `Record<string, unknown>` instead.',
-              '- If you want a type meaning "any value", you probably want `unknown` instead.',
-            ].join('\n'),
-          },
-          object: {
-            message: [
-              'The `object` type is currently hard to use ([see this issue](https://github.com/microsoft/TypeScript/issues/21732)).',
-              'Consider using `Record<string, unknown>` instead, as it allows you to more easily inspect and use the keys.',
-            ].join('\n'),
-          },
-        },
-      },
-    ],
     "@typescript-eslint/consistent-type-assertions": [
       "error",
       {
@@ -194,6 +145,47 @@ module.exports = {
     ],
     "@typescript-eslint/no-non-null-asserted-nullish-coalescing": "error",
     "@typescript-eslint/no-non-null-assertion": "error",
+    "@typescript-eslint/no-restricted-types": [
+      "error",
+      {
+        types: {
+          String: {
+            message: "Use string instead",
+            fixWith: "string",
+          },
+          Boolean: {
+            message: "Use boolean instead",
+            fixWith: "boolean",
+          },
+          Number: {
+            message: "Use number instead",
+            fixWith: "number",
+          },
+          Symbol: {
+            message: "Use symbol instead",
+            fixWith: "symbol",
+          },
+          BigInt: {
+            message: "Use bigint instead",
+            fixWith: "bigint",
+          },
+          // object typing
+          Object: {
+            message: [
+              'The `Object` type actually means "any non-nullish value", so it is marginally better than `unknown`.',
+              '- If you want a type meaning "any object", you probably want `Record<string, unknown>` instead.',
+              '- If you want a type meaning "any value", you probably want `unknown` instead.',
+            ].join('\n'),
+          },
+          object: {
+            message: [
+              'The `object` type is currently hard to use ([see this issue](https://github.com/microsoft/TypeScript/issues/21732)).',
+              'Consider using `Record<string, unknown>` instead, as it allows you to more easily inspect and use the keys.',
+            ].join('\n'),
+          },
+        },
+      },
+    ],
     "@typescript-eslint/no-this-alias": [
       "error",
       {
@@ -205,6 +197,7 @@ module.exports = {
     "@typescript-eslint/no-unsafe-assignment": "off",
     "@typescript-eslint/no-unsafe-call": "off",
     "@typescript-eslint/no-unsafe-enum-comparison": "off",
+    "@typescript-eslint/no-unsafe-function-type": "off",
     "@typescript-eslint/no-unsafe-member-access": "off",
     "@typescript-eslint/no-unsafe-return": "off",
     "@typescript-eslint/no-unused-vars": [
