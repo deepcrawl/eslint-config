@@ -3,9 +3,9 @@ import eslintConfigPrettier from "eslint-config-prettier";
 import arrayFuncPlugin from "eslint-plugin-array-func";
 import importPlugin from "eslint-plugin-import";
 import jestPlugin from "eslint-plugin-jest";
-import jsonFormatPlugin from "eslint-plugin-json-format";
 import noLoopsPlugin from "eslint-plugin-no-loops";
 import nodePlugin from "eslint-plugin-n";
+import packageJsonPluginConfig from "eslint-plugin-package-json/configs/recommended";
 import promisePlugin from "eslint-plugin-promise";
 import sonarjsPlugin from "eslint-plugin-sonarjs";
 import typescriptEslint from "typescript-eslint";
@@ -30,6 +30,14 @@ export default [
   importPlugin.flatConfigs.typescript,
   jestPlugin.configs["flat/recommended"],
   nodePlugin.configs["flat/recommended"],
+  {
+    ...packageJsonPluginConfig,
+    rules: {
+      ...packageJsonPluginConfig.rules,
+      // https://github.com/JoshuaKGoldberg/eslint-plugin-package-json/issues/499
+      "package-json/sort-collections": ["error", ["devDependencies", "dependencies", "peerDependencies", "config"]],
+    },
+  },
   promisePlugin.configs["flat/recommended"],
   eslintConfigPrettier,
   {
@@ -38,15 +46,6 @@ export default [
   {
     plugins: { "array-func": arrayFuncPlugin },
     rules: { "array-func/avoid-reverse": "error" },
-  },
-  {
-    files: ["**/*.json"],
-    plugins: { json: jsonFormatPlugin },
-    settings: {
-      "json/sort-package-json": "standard",
-      "json/ignore-files": [],
-      "json/json-with-comments-files": [],
-    },
   },
   {
     plugins: { "no-loops": noLoopsPlugin },

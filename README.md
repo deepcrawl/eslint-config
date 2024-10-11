@@ -48,6 +48,7 @@ Apart from ESLint, it is recommended to use the following Prettier configuration
   "arrowParens": "avoid",
   "bracketSpacing": true,
   "endOfLine": "lf",
+  "plugins": ["prettier-plugin-packagejson"],
   "printWidth": 120,
   "quoteProps": "as-needed",
   "semi": true,
