@@ -23,74 +23,40 @@ export default [
     },
   },
   {
-    files: ["**/*.{js,jsx,graphql}"],
+    files: ["**/*.{cjs,js,jsx,mjs}"],
     ...typescriptEslint.configs.disableTypeChecked,
   },
   importPlugin.flatConfigs.recommended,
-  importPlugin.configs.typescript,
+  importPlugin.flatConfigs.typescript,
   jestPlugin.configs["flat/recommended"],
   nodePlugin.configs["flat/recommended"],
   promisePlugin.configs["flat/recommended"],
   eslintConfigPrettier,
   {
-    linterOptions: {
-      reportUnusedDisableDirectives: true,
-    },
+    linterOptions: { reportUnusedDisableDirectives: true },
   },
   {
-    plugins: {
-      "typescript-eslint": typescriptEslint,
-      "array-func": arrayFuncPlugin,
-      "no-loops": noLoopsPlugin,
-      jest: jestPlugin,
-      "json-format": jsonFormatPlugin,
-      promise: promisePlugin,
-      sonarjs: sonarjsPlugin,
-    },
+    plugins: { "@typescript-eslint": typescriptEslint },
     rules: {
-      "@typescript-eslint/array-type": [
-        "error",
-        {
-          default: "array-simple",
-        },
-      ],
+      "@typescript-eslint/array-type": ["error", { default: "array-simple" }],
       "@typescript-eslint/consistent-type-assertions": [
         "error",
-        {
-          assertionStyle: "angle-bracket",
-          objectLiteralTypeAssertions: "allow",
-        },
+        { assertionStyle: "angle-bracket", objectLiteralTypeAssertions: "allow" },
       ],
       "@typescript-eslint/consistent-type-definitions": ["error", "interface"],
       "@typescript-eslint/explicit-function-return-type": [
         "error",
-        {
-          allowExpressions: true,
-          allowTypedFunctionExpressions: true,
-        },
+        { allowExpressions: true, allowTypedFunctionExpressions: true },
       ],
       "@typescript-eslint/explicit-member-accessibility": [
         "error",
-        {
-          accessibility: "explicit",
-          overrides: {
-            constructors: "no-public",
-          },
-        },
+        { accessibility: "explicit", overrides: { constructors: "no-public" } },
       ],
       "@typescript-eslint/explicit-module-boundary-types": "off",
       "@typescript-eslint/naming-convention": [
         "warn",
-        {
-          selector: "default",
-          format: ["camelCase"],
-          leadingUnderscore: "allow",
-          trailingUnderscore: "allow",
-        },
-        {
-          selector: "import",
-          format: ["camelCase", "PascalCase", "snake_case"],
-        },
+        { selector: "default", format: ["camelCase"], leadingUnderscore: "allow", trailingUnderscore: "allow" },
+        { selector: "import", format: ["camelCase", "PascalCase", "snake_case"] },
         {
           selector: "variable",
           format: ["camelCase", "PascalCase", "UPPER_CASE"],
@@ -103,96 +69,36 @@ export default [
           format: ["PascalCase"],
           prefix: ["are", "can", "did", "does", "do", "has", "is", "not", "should", "was", "were", "will", "with"],
         },
-        {
-          selector: "function",
-          format: ["camelCase", "PascalCase"],
-        },
+        { selector: "function", format: ["camelCase", "PascalCase"] },
         {
           selector: "property",
           format: ["camelCase", "PascalCase", "UPPER_CASE"],
           leadingUnderscore: "allow",
           trailingUnderscore: "allow",
         },
-        {
-          selector: "property",
-          format: null,
-          filter: {
-            regex: "[- :]",
-            match: true,
-          },
-        },
-        {
-          selector: "enumMember",
-          format: ["camelCase", "PascalCase"],
-        },
-        {
-          selector: "typeLike",
-          format: ["PascalCase"],
-        },
-        {
-          selector: "interface",
-          format: ["PascalCase"],
-          prefix: ["I"],
-        },
-        {
-          selector: "typeParameter",
-          format: ["PascalCase"],
-          prefix: ["T"],
-        },
+        { selector: "property", format: null, filter: { regex: "[- :]", match: true } },
+        { selector: "enumMember", format: ["camelCase", "PascalCase"] },
+        { selector: "typeLike", format: ["PascalCase"] },
+        { selector: "interface", format: ["PascalCase"], prefix: ["I"] },
+        { selector: "typeParameter", format: ["PascalCase"], prefix: ["T"] },
       ],
       "@typescript-eslint/no-base-to-string": "off",
       "@typescript-eslint/no-duplicate-enum-values": "off",
-      "@typescript-eslint/no-empty-function": [
-        "error",
-        {
-          allow: ["protected-constructors", "private-constructors"],
-        },
-      ],
-      "@typescript-eslint/no-explicit-any": [
-        "error",
-        {
-          fixToUnknown: true,
-          ignoreRestArgs: true,
-        },
-      ],
-      "@typescript-eslint/no-inferrable-types": [
-        "error",
-        {
-          ignoreProperties: true,
-        },
-      ],
-      "@typescript-eslint/no-magic-numbers": [
-        "off",
-        {
-          ignoreNumericLiteralTypes: true,
-        },
-      ],
+      "@typescript-eslint/no-empty-function": ["error", { allow: ["protected-constructors", "private-constructors"] }],
+      "@typescript-eslint/no-explicit-any": ["error", { fixToUnknown: true, ignoreRestArgs: true }],
+      "@typescript-eslint/no-inferrable-types": ["error", { ignoreProperties: true }],
+      "@typescript-eslint/no-magic-numbers": ["off", { ignoreNumericLiteralTypes: true }],
       "@typescript-eslint/no-non-null-asserted-nullish-coalescing": "error",
       "@typescript-eslint/no-non-null-assertion": "error",
       "@typescript-eslint/no-restricted-types": [
         "error",
         {
           types: {
-            String: {
-              message: "Use string instead",
-              fixWith: "string",
-            },
-            Boolean: {
-              message: "Use boolean instead",
-              fixWith: "boolean",
-            },
-            Number: {
-              message: "Use number instead",
-              fixWith: "number",
-            },
-            Symbol: {
-              message: "Use symbol instead",
-              fixWith: "symbol",
-            },
-            BigInt: {
-              message: "Use bigint instead",
-              fixWith: "bigint",
-            },
+            String: { message: "Use string instead", fixWith: "string" },
+            Boolean: { message: "Use boolean instead", fixWith: "boolean" },
+            Number: { message: "Use number instead", fixWith: "number" },
+            Symbol: { message: "Use symbol instead", fixWith: "symbol" },
+            BigInt: { message: "Use bigint instead", fixWith: "bigint" },
             // object typing
             Object: {
               message: [
@@ -210,12 +116,7 @@ export default [
           },
         },
       ],
-      "@typescript-eslint/no-this-alias": [
-        "error",
-        {
-          allowDestructuring: true,
-        },
-      ],
+      "@typescript-eslint/no-this-alias": ["error", { allowDestructuring: true }],
       "@typescript-eslint/no-unnecessary-type-arguments": "error",
       "@typescript-eslint/no-unsafe-argument": "off",
       "@typescript-eslint/no-unsafe-assignment": "off",
@@ -224,13 +125,7 @@ export default [
       "@typescript-eslint/no-unsafe-function-type": "off",
       "@typescript-eslint/no-unsafe-member-access": "off",
       "@typescript-eslint/no-unsafe-return": "off",
-      "@typescript-eslint/no-unused-vars": [
-        "error",
-        {
-          argsIgnorePattern: "^_",
-          destructuredArrayIgnorePattern: "^_",
-        },
-      ],
+      "@typescript-eslint/no-unused-vars": ["error", { argsIgnorePattern: "^_", destructuredArrayIgnorePattern: "^_" }],
       "@typescript-eslint/no-useless-constructor": "error",
       "@typescript-eslint/prefer-includes": "error",
       "@typescript-eslint/prefer-regexp-exec": "error",
@@ -239,7 +134,15 @@ export default [
       "@typescript-eslint/return-await": "error",
       "@typescript-eslint/sort-type-constituents": "error",
       "@typescript-eslint/unified-signatures": "error",
-      "array-func/avoid-reverse": "error",
+    },
+  },
+  {
+    plugins: { "array-func": arrayFuncPlugin },
+    rules: { "array-func/avoid-reverse": "error" },
+  },
+  {
+    plugins: { import: importPlugin },
+    rules: {
       "import/default": "off",
       "import/named": "off",
       "import/namespace": "off",
@@ -252,14 +155,16 @@ export default [
       "import/order": [
         "error",
         {
-          alphabetize: {
-            order: "asc",
-            caseInsensitive: true,
-          },
+          alphabetize: { order: "asc", caseInsensitive: true },
           "newlines-between": "always",
           groups: ["builtin", "external", "internal", "parent", "sibling", "index"],
         },
       ],
+    },
+  },
+  {
+    plugins: { jest: jestPlugin },
+    rules: {
       "jest/expect-expect": "error",
       "jest/padding-around-after-all-blocks": "error",
       "jest/padding-around-after-each-blocks": "error",
@@ -269,21 +174,36 @@ export default [
       "jest/padding-around-test-blocks": "error",
       "jest/prefer-expect-resolves": "error",
       "jest/prefer-to-be": "error",
-      "no-loops/no-loops": "error",
+    },
+  },
+  {
+    files: ["**/*.json"],
+    plugins: { json: jsonFormatPlugin },
+    settings: {
+      "json/sort-package-json": "standard",
+      "json/ignore-files": [],
+      "json/json-with-comments-files": [],
+    },
+  },
+  {
+    plugins: { n: nodePlugin },
+    rules: {
       "n/no-missing-import": "off",
-      "n/no-unsupported-features/node-builtins": [
-        "error",
-        {
-          ignores: ["fetch", "Response", "Request"],
-        },
-      ],
-      "n/no-unsupported-features/es-syntax": [
-        "error",
-        {
-          ignores: ["modules"],
-        },
-      ],
-      "promise/prefer-await-to-then": "error",
+      "n/no-unsupported-features/node-builtins": ["error", { ignores: ["fetch", "Response", "Request"] }],
+      "n/no-unsupported-features/es-syntax": ["error", { ignores: ["modules"] }],
+    },
+  },
+  {
+    plugins: { "no-loops": noLoopsPlugin },
+    rules: { "no-loops/no-loops": "error" },
+  },
+  {
+    plugins: { promise: promisePlugin },
+    rules: { "promise/prefer-await-to-then": "error" },
+  },
+  {
+    plugins: { sonarjs: sonarjsPlugin },
+    rules: {
       "sonarjs/cognitive-complexity": ["error", 8],
       "sonarjs/max-switch-cases": "error",
       "sonarjs/no-all-duplicated-branches": "error",
@@ -306,34 +226,20 @@ export default [
       "sonarjs/no-useless-catch": "error",
       "sonarjs/prefer-immediate-return": "error",
       "sonarjs/prefer-while": "error",
+    },
+  },
+  {
+    rules: {
       complexity: ["error", 10],
       "default-case-last": "error",
       "max-classes-per-file": ["error", 1],
       "max-len": [
         "error",
-        {
-          code: 120,
-          ignoreComments: true,
-          ignorePattern: "^(export|import)*",
-          ignoreTemplateLiterals: true,
-        },
+        { code: 120, ignoreComments: true, ignorePattern: "^(export|import)*", ignoreTemplateLiterals: true },
       ],
-      "max-lines-per-function": [
-        "warn",
-        {
-          max: 20,
-          skipBlankLines: true,
-          skipComments: true,
-          IIFEs: true,
-        },
-      ],
+      "max-lines-per-function": ["warn", { max: 20, skipBlankLines: true, skipComments: true, IIFEs: true }],
       "max-params": ["error", 7],
-      "max-statements-per-line": [
-        "error",
-        {
-          max: 1,
-        },
-      ],
+      "max-statements-per-line": ["error", { max: 1 }],
       "no-console": "error",
       "no-else-return": "error",
       "no-multi-str": "error",
@@ -349,11 +255,6 @@ export default [
       "object-shorthand": "error",
       "prefer-template": "error",
       "spaced-comment": "error",
-    },
-    settings: {
-      "json/sort-package-json": "standard",
-      "json/ignore-files": [],
-      "json/json-with-comments-files": [],
     },
   },
 ];

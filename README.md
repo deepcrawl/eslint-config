@@ -19,9 +19,7 @@ Update your `eslint.config.mjs` file:
 ```js
 import eslintConfigDeepcrawl from "eslint-config-deepcrawl";
 
-export default [
-  ...eslintConfigDeepcrawl,
-];
+export default [...eslintConfigDeepcrawl];
 ```
 
 ## Recommendations
