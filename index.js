@@ -55,7 +55,7 @@ export default [
   {
     plugins: { sonarjs: sonarjsPlugin },
     rules: {
-      "sonarjs/cognitive-complexity": ["error", 8],
+      "sonarjs/cognitive-complexity": ["error", 15],
       "sonarjs/max-switch-cases": "error",
       "sonarjs/no-all-duplicated-branches": "error",
       "sonarjs/no-collapsible-if": "error",
@@ -182,7 +182,7 @@ export default [
   },
   {
     rules: {
-      complexity: ["error", 10],
+      complexity: ["error", 15],
       "default-case-last": "error",
       "import/default": "off",
       "import/named": "off",
