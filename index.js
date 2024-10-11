@@ -12,8 +12,8 @@ import typescriptEslint from "typescript-eslint";
 
 export default [
   eslintJs.configs.recommended,
-  ...typescriptEslint.configs.recommendedTypeChecked,
-  {
+  ...typescriptEslint.config({
+    extends: [...typescriptEslint.configs.recommendedTypeChecked],
     files: ["**/*.{ts,tsx}"],
     languageOptions: {
       parserOptions: {
@@ -21,7 +21,7 @@ export default [
         tsconfigRootDir: import.meta.name,
       },
     },
-  },
+  }),
   {
     files: ["**/*.{cjs,js,jsx,mjs}"],
     ...typescriptEslint.configs.disableTypeChecked,
