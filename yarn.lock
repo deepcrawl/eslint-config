@@ -2620,7 +2620,6 @@ __metadata:
     eslint-plugin-array-func: "npm:^4.0.0"
     eslint-plugin-import: "npm:^2.31.0"
     eslint-plugin-jest: "npm:^28.8.3"
-    eslint-plugin-jest-formatting: "npm:3.1.0"
     eslint-plugin-json-format: "npm:^2.0.1"
     eslint-plugin-n: "npm:^17.10.3"
     eslint-plugin-no-loops: "npm:^0.3.0"
@@ -2714,15 +2713,6 @@ __metadata:
   peerDependencies:
     eslint: ^2 || ^3 || ^4 || ^5 || ^6 || ^7.2.0 || ^8 || ^9
   checksum: 10/6b76bd009ac2db0615d9019699d18e2a51a86cb8c1d0855a35fb1b418be23b40239e6debdc6e8c92c59f1468ed0ea8d7b85c817117a113d5cc225be8a02ad31c
-  languageName: node
-  linkType: hard
-
-"eslint-plugin-jest-formatting@npm:3.1.0":
-  version: 3.1.0
-  resolution: "eslint-plugin-jest-formatting@npm:3.1.0"
-  peerDependencies:
-    eslint: ">=0.8.0"
-  checksum: 10/5e7a7304df969edb7e7442676b4a7d0e672ca0d9096eeda316e10a3c4de3f4afa391ba963662bf560a7382920ac3f2e6dc42a7955a9ae9f9683b264a36fca536
   languageName: node
   linkType: hard
 
