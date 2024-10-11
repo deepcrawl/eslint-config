@@ -23,7 +23,7 @@ export default [
     },
   },
   {
-    files: ["**/*.{cjs,js,json,jsx,mjs,graphql}"],
+    files: ["**/*.{cjs,js,json,jsx,mjs}"],
     ...typescriptEslint.configs.disableTypeChecked,
   },
   importPlugin.flatConfigs.recommended,
