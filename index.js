@@ -219,7 +219,7 @@ export default [
       "max-params": ["error", 7],
       "max-statements-per-line": ["error", { max: 1 }],
       "n/no-missing-import": "off",
-      "n/no-unsupported-features/node-builtins": ["error", { ignores: ["fetch", "Response", "Request"] }],
+      "n/no-unsupported-features/node-builtins": ["error", { ignores: ["fetch", "navigator", "Response", "Request"] }],
       "n/no-unsupported-features/es-syntax": ["error", { ignores: ["modules"] }],
       "no-console": "error",
       "no-else-return": "error",
