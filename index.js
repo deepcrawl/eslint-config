@@ -23,7 +23,7 @@ export default [
     },
   },
   {
-    files: ["**/*.{cjs,js,jsx,mjs}"],
+    files: ["**/*.{cjs,js,json,jsx,mjs,graphql}"],
     ...typescriptEslint.configs.disableTypeChecked,
   },
   importPlugin.flatConfigs.recommended,
@@ -80,6 +80,7 @@ export default [
     },
   },
   {
+    files: ["**/*.{ts,tsx}"],
     rules: {
       "@typescript-eslint/array-type": ["error", { default: "array-simple" }],
       "@typescript-eslint/consistent-type-assertions": [
@@ -177,6 +178,10 @@ export default [
       "@typescript-eslint/return-await": "error",
       "@typescript-eslint/sort-type-constituents": "error",
       "@typescript-eslint/unified-signatures": "error",
+    },
+  },
+  {
+    rules: {
       complexity: ["error", 10],
       "default-case-last": "error",
       "import/default": "off",
