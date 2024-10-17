@@ -9,27 +9,17 @@ Add `eslint-config-deepcrawl` and its peer dependencies to your `package.json`:
 ```shell
 yarn add --dev \
   eslint-config-deepcrawl \
-  eslint@^8.57.0
+  eslint@^9.12.0
 ```
 
 ## Usage
 
-Update your `.eslintrc` configuration:
+Update your `eslint.config.mjs` file:
 
-```json
-{
-  "extends": ["deepcrawl"]
-}
-```
+```js
+import eslintConfigDeepcrawl from "eslint-config-deepcrawl";
 
-If you are using tsconfig paths, you also need to let `eslint-plugin-import` know, which imports should it consider internal, for example:
-
-```json
-{
-  "settings": {
-    "import/internal-regex": "^@(src|test)/"
-  }
-}
+export default [...eslintConfigDeepcrawl];
 ```
 
 ## Recommendations
@@ -58,6 +48,7 @@ Apart from ESLint, it is recommended to use the following Prettier configuration
   "arrowParens": "avoid",
   "bracketSpacing": true,
   "endOfLine": "lf",
+  "plugins": ["prettier-plugin-packagejson"],
   "printWidth": 120,
   "quoteProps": "as-needed",
   "semi": true,
