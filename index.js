@@ -214,7 +214,7 @@ export default [
         "error",
         { code: 120, ignoreComments: true, ignorePattern: "^(export|import)*", ignoreTemplateLiterals: true },
       ],
-      "max-lines-per-function": ["warn", { max: 20, skipBlankLines: true, skipComments: true, IIFEs: true }],
+      "max-lines-per-function": ["warn", { max: 40, skipBlankLines: true, skipComments: true, IIFEs: true }],
       "max-params": ["error", 7],
       "max-statements-per-line": ["error", { max: 1 }],
       "n/no-missing-import": "off",
