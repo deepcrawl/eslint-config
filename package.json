@@ -44,7 +44,7 @@
     "eslint": "^9.15.0",
     "typescript": ">=5.4"
   },
-  "packageManager": "yarn@4.5.1",
+  "packageManager": "yarn@4.6.0",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   }
