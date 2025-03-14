@@ -14,7 +14,7 @@ export default [
   eslintJs.configs.recommended,
   ...typescriptEslint.config({
     extends: [...typescriptEslint.configs.recommendedTypeChecked],
-    files: ["**/*.{ts,tsx}"],
+    files: ["**/*.{cts,mts,ts,tsx}"],
     languageOptions: {
       parserOptions: {
         projectService: true,
@@ -79,7 +79,7 @@ export default [
     },
   },
   {
-    files: ["**/*.{ts,tsx}"],
+    files: ["**/*.{cts,mts,ts,tsx}"],
     rules: {
       "@typescript-eslint/array-type": ["error", { default: "array-simple" }],
       "@typescript-eslint/consistent-type-assertions": [
