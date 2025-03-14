@@ -1,5 +1,5 @@
 import eslintJs from "@eslint/js";
-import eslintConfigPrettier from "eslint-config-prettier";
+import eslintConfigPrettier from "eslint-config-prettier/flat";
 import arrayFuncPlugin from "eslint-plugin-array-func";
 import importPlugin from "eslint-plugin-import";
 import jestPlugin from "eslint-plugin-jest";
