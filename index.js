@@ -5,7 +5,7 @@ import importPlugin from "eslint-plugin-import";
 import jestPlugin from "eslint-plugin-jest";
 import noLoopsPlugin from "eslint-plugin-no-loops";
 import nodePlugin from "eslint-plugin-n";
-import packageJsonPluginConfig from "eslint-plugin-package-json/configs/recommended";
+import packageJsonPluginConfig from "eslint-plugin-package-json";
 import promisePlugin from "eslint-plugin-promise";
 import sonarjsPlugin from "eslint-plugin-sonarjs";
 import typescriptEslint from "typescript-eslint";
@@ -31,9 +31,9 @@ export default [
   jestPlugin.configs["flat/recommended"],
   nodePlugin.configs["flat/recommended"],
   {
-    ...packageJsonPluginConfig,
+    ...packageJsonPluginConfig.configs.recommended,
     rules: {
-      ...packageJsonPluginConfig.rules,
+      ...packageJsonPluginConfig.configs.recommended.rules,
       // https://github.com/JoshuaKGoldberg/eslint-plugin-package-json/issues/499
       "package-json/sort-collections": ["error", ["devDependencies", "dependencies", "peerDependencies", "config"]],
     },
