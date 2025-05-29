@@ -9,7 +9,7 @@ Add `eslint-config-deepcrawl` and its peer dependencies to your `package.json`:
 ```shell
 yarn add --dev \
   eslint-config-deepcrawl \
-  eslint@^9.22.0
+  eslint@^9.27.0
 ```
 
 ## Usage
