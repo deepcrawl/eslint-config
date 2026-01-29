@@ -25,6 +25,6 @@ jobs:
               '+([0-9])?(.{+([0-9]),x}).x',
               'main'
             ]
+          semantic_version: 25 # https://github.com/cycjimmy/semantic-release-action/issues/269#issuecomment-3503478001
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
