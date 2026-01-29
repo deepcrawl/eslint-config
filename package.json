@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "ssh://git@github.com/deepcrawl/eslint-config.git"
+    "url": "git@github.com:deepcrawl/eslint-config.git"
   },
   "license": "MIT",
   "author": "Lumar (formerly DeepCrawl)",
