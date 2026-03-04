@@ -49,22 +49,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@isaacs/balanced-match@npm:^4.0.1":
-  version: 4.0.1
-  resolution: "@isaacs/balanced-match@npm:4.0.1"
-  checksum: 10/102fbc6d2c0d5edf8f6dbf2b3feb21695a21bc850f11bc47c4f06aa83bd8884fde3fe9d6d797d619901d96865fdcb4569ac2a54c937992c48885c5e3d9967fe8
-  languageName: node
-  linkType: hard
-
-"@isaacs/brace-expansion@npm:^5.0.1":
-  version: 5.0.1
-  resolution: "@isaacs/brace-expansion@npm:5.0.1"
-  dependencies:
-    "@isaacs/balanced-match": "npm:^4.0.1"
-  checksum: 10/aec226065bc4285436a27379e08cc35bf94ef59f5098ac1c026495c9ba4ab33d851964082d3648d56d63eb90f2642867bd15a3e1b810b98beb1a8c14efce6a94
-  languageName: node
-  linkType: hard
-
 "@rtsao/scc@npm:^1.1.0":
   version: 1.1.0
   resolution: "@rtsao/scc@npm:1.1.0"
@@ -690,7 +674,7 @@ __metadata:
     eslint-plugin-no-loops: "npm:^0.4.0"
     eslint-plugin-package-json: "npm:^0.89.2"
     eslint-plugin-promise: "npm:^7.2.1"
-    eslint-plugin-sonarjs: "npm:^3.0.7"
+    eslint-plugin-sonarjs: "npm:^4.0.0"
     jsonc-eslint-parser: "npm:^3.1.0"
     prettier: "npm:3.8.1"
     prettier-plugin-packagejson: "npm:3.0.0"
@@ -880,23 +864,25 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-sonarjs@npm:^3.0.7":
-  version: 3.0.7
-  resolution: "eslint-plugin-sonarjs@npm:3.0.7"
+"eslint-plugin-sonarjs@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "eslint-plugin-sonarjs@npm:4.0.0"
   dependencies:
     "@eslint-community/regexpp": "npm:4.12.2"
     builtin-modules: "npm:3.3.0"
     bytes: "npm:3.1.2"
     functional-red-black-tree: "npm:1.0.1"
+    globals: "npm:17.3.0"
     jsx-ast-utils-x: "npm:0.1.0"
     lodash.merge: "npm:4.6.2"
-    minimatch: "npm:10.1.2"
+    minimatch: "npm:10.2.1"
     scslre: "npm:0.3.0"
     semver: "npm:7.7.4"
+    ts-api-utils: "npm:2.4.0"
     typescript: "npm:>=5"
   peerDependencies:
-    eslint: ^8.0.0 || ^9.0.0
-  checksum: 10/1e457c16fe200f36361595f96ef46681b1c7797c81471093edccb944a29d96434650d3800de9962707579a9f357586d090e56694e72060024a2bd80d56b537a9
+    eslint: ^8.0.0 || ^9.0.0 || ^10.0.0
+  checksum: 10/cf537b6d8ffae3b243eee6dd0b06d7d3c2bfd9971b9b39cdcb873075691eea03631261d0a4b7755ef1c08f5edf1d3d02dc7de8352f3d3ae81d7156e8f4026132
   languageName: node
   linkType: hard
 
@@ -1039,6 +1025,13 @@ __metadata:
   version: 4.2.1
   resolution: "git-hooks-list@npm:4.2.1"
   checksum: 10/39449520045539c03b1d45d3a010424849152d6f723b638c6f19cb8c8b0993bb30ed5ef09653f4d1c1356f5fb51a396059096d8bdfcb6ca7ccb54f6e26efc338
+  languageName: node
+  linkType: hard
+
+"globals@npm:17.3.0":
+  version: 17.3.0
+  resolution: "globals@npm:17.3.0"
+  checksum: 10/44ba2b7db93eb6a2531dfba09219845e21f2e724a4f400eb59518b180b7d5bcf7f65580530e3d3023d7dc2bdbacf5d265fd87c393f567deb9a2b0472b51c9d5e
   languageName: node
   linkType: hard
 
@@ -1438,12 +1431,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"minimatch@npm:10.1.2":
-  version: 10.1.2
-  resolution: "minimatch@npm:10.1.2"
+"minimatch@npm:10.2.1":
+  version: 10.2.1
+  resolution: "minimatch@npm:10.2.1"
   dependencies:
-    "@isaacs/brace-expansion": "npm:^5.0.1"
-  checksum: 10/6f0ef975463739207144e411bdd54f7205ce38770b162fa3bc4c9be4987a16cb20d0962a82f26c2372598cfba90faa97b327239d303b529b774f17681c163b46
+    brace-expansion: "npm:^5.0.2"
+  checksum: 10/d41c195ee1f2c70a75641088e36d0fa5fa286cb6fe48558e6d3bf3d95f640eda453c217707215389b12234df12175f65f338c0b841b36b0125177dbd6a80d026
   languageName: node
   linkType: hard
 
@@ -1999,7 +1992,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ts-api-utils@npm:^2.4.0":
+"ts-api-utils@npm:2.4.0, ts-api-utils@npm:^2.4.0":
   version: 2.4.0
   resolution: "ts-api-utils@npm:2.4.0"
   peerDependencies:
