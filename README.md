@@ -1,6 +1,6 @@
 # eslint-config
 
-ESLint rules used by DeepCrawl.
+ESLint rules used by Lumar (formerly DeepCrawl).
 
 ## Installation
 
@@ -9,7 +9,7 @@ Add `eslint-config-deepcrawl` and its peer dependencies to your `package.json`:
 ```shell
 yarn add --dev \
   eslint-config-deepcrawl \
-  eslint@^9.39.2
+  eslint@^9.39.3
 ```
 
 ## Usage
