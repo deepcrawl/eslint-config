@@ -1,48 +1,45 @@
 import eslintJs from "@eslint/js";
+import stylisticPlugin from "@stylistic/eslint-plugin";
+import { defineConfig } from "eslint/config";
 import eslintConfigPrettier from "eslint-config-prettier/flat";
 import arrayFuncPlugin from "eslint-plugin-array-func";
-import importPlugin from "eslint-plugin-import";
+import importXPlugin from "eslint-plugin-import-x";
 import jestPlugin from "eslint-plugin-jest";
-import noLoopsPlugin from "eslint-plugin-no-loops";
 import nodePlugin from "eslint-plugin-n";
-import packageJsonPluginConfig from "eslint-plugin-package-json";
+import noLoopsPlugin from "eslint-plugin-no-loops";
+import packageJsonPlugin from "eslint-plugin-package-json";
 import promisePlugin from "eslint-plugin-promise";
 import sonarjsPlugin from "eslint-plugin-sonarjs";
 import typescriptEslint from "typescript-eslint";
 
-export default [
+export default defineConfig([
+  { linterOptions: { reportUnusedDisableDirectives: true } },
+
   eslintJs.configs.recommended,
-  ...typescriptEslint.config({
-    extends: [...typescriptEslint.configs.recommendedTypeChecked],
-    files: ["**/*.{cts,mts,ts,tsx}"],
-    languageOptions: {
-      parserOptions: {
-        projectService: true,
-        tsconfigRootDir: import.meta.name,
-      },
-    },
-  }),
-  {
-    files: ["**/*.{cjs,js,jsx,mjs}"],
-    ...typescriptEslint.configs.disableTypeChecked,
-  },
-  importPlugin.flatConfigs.recommended,
-  importPlugin.flatConfigs.typescript,
+  importXPlugin.flatConfigs.recommended,
+  importXPlugin.flatConfigs.typescript,
   jestPlugin.configs["flat/recommended"],
   nodePlugin.configs["flat/recommended"],
+  promisePlugin.configs["flat/recommended"],
   {
-    ...packageJsonPluginConfig.configs.recommended,
+    ...packageJsonPlugin.configs.recommended,
     rules: {
-      ...packageJsonPluginConfig.configs.recommended.rules,
+      ...packageJsonPlugin.configs.recommended.rules,
       // https://github.com/JoshuaKGoldberg/eslint-plugin-package-json/issues/499
       "package-json/sort-collections": ["error", ["devDependencies", "dependencies", "peerDependencies", "config"]],
     },
   },
-  promisePlugin.configs["flat/recommended"],
-  eslintConfigPrettier,
+
   {
-    linterOptions: { reportUnusedDisableDirectives: true },
+    files: ["**/*.{cts,mts,ts,tsx}"],
+    extends: [typescriptEslint.configs.recommendedTypeChecked],
+    languageOptions: { parserOptions: { projectService: true } },
   },
+  {
+    files: ["**/*.{cjs,js,jsx,mjs}"],
+    extends: [typescriptEslint.configs.disableTypeChecked],
+  },
+
   {
     plugins: { "array-func": arrayFuncPlugin },
     rules: { "array-func/avoid-reverse": "error" },
@@ -77,6 +74,9 @@ export default [
       "sonarjs/prefer-while": "error",
     },
   },
+
+  eslintConfigPrettier,
+
   {
     files: ["**/*.{cts,mts,ts,tsx}"],
     rules: {
@@ -141,7 +141,6 @@ export default [
             Number: { message: "Use number instead", fixWith: "number" },
             Symbol: { message: "Use symbol instead", fixWith: "symbol" },
             BigInt: { message: "Use bigint instead", fixWith: "bigint" },
-            // object typing
             Object: {
               message: [
                 'The `Object` type actually means "any non-nullish value", so it is marginally better than `unknown`.',
@@ -174,24 +173,25 @@ export default [
       "@typescript-eslint/require-array-sort-compare": "error",
       "@typescript-eslint/restrict-template-expressions": "off",
       "@typescript-eslint/return-await": "error",
-      "@typescript-eslint/sort-type-constituents": "error",
       "@typescript-eslint/unified-signatures": "error",
     },
   },
+
   {
+    plugins: { "@stylistic": stylisticPlugin },
     rules: {
       complexity: ["error", 15],
       "default-case-last": "error",
-      "import/default": "off",
-      "import/named": "off",
-      "import/namespace": "off",
-      "import/newline-after-import": "error",
-      "import/no-default-export": "error",
-      "import/no-named-as-default": "off",
-      "import/no-named-as-default-member": "off",
-      "import/no-relative-packages": "error",
-      "import/no-unresolved": "off",
-      "import/order": [
+      "import-x/default": "off",
+      "import-x/named": "off",
+      "import-x/namespace": "off",
+      "import-x/newline-after-import": "error",
+      "import-x/no-default-export": "error",
+      "import-x/no-named-as-default": "off",
+      "import-x/no-named-as-default-member": "off",
+      "import-x/no-relative-packages": "error",
+      "import-x/no-unresolved": "off",
+      "import-x/order": [
         "error",
         {
           alphabetize: { order: "asc", caseInsensitive: true },
@@ -209,13 +209,14 @@ export default [
       "jest/prefer-expect-resolves": "error",
       "jest/prefer-to-be": "error",
       "max-classes-per-file": ["error", 1],
-      "max-len": [
+      "max-lines-per-function": ["warn", { max: 40, skipBlankLines: true, skipComments: true, IIFEs: true }],
+      "max-params": ["error", 7],
+      "@stylistic/max-len": [
         "error",
         { code: 120, ignoreComments: true, ignorePattern: "^(export|import)*", ignoreTemplateLiterals: true },
       ],
-      "max-lines-per-function": ["warn", { max: 40, skipBlankLines: true, skipComments: true, IIFEs: true }],
-      "max-params": ["error", 7],
-      "max-statements-per-line": ["error", { max: 1 }],
+      "@stylistic/max-statements-per-line": ["error", { max: 1 }],
+      "@stylistic/spaced-comment": "error",
       "n/no-missing-import": "off",
       "n/no-unsupported-features/node-builtins": ["error", { ignores: ["fetch", "navigator", "Response", "Request"] }],
       "n/no-unsupported-features/es-syntax": ["error", { ignores: ["modules"] }],
@@ -235,7 +236,6 @@ export default [
       "object-shorthand": "error",
       "prefer-template": "error",
       "promise/prefer-await-to-then": "error",
-      "spaced-comment": "error",
     },
   },
-];
+]);

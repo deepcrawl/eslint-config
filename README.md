@@ -9,7 +9,7 @@ Add `eslint-config-deepcrawl` and its peer dependencies to your `package.json`:
 ```shell
 yarn add --dev \
   eslint-config-deepcrawl \
-  eslint@^9.39.3
+  eslint@^10.0.0
 ```
 
 ## Usage
@@ -60,3 +60,20 @@ Apart from ESLint, it is recommended to use the following Prettier configuration
 ```
 
 with `lint-staged` pre-commit hook done via `husky`.
+
+## Migrating from v14
+
+v15 upgrades to ESLint 10 and replaces `eslint-plugin-import` with its
+maintained fork `eslint-plugin-import-x`. To upgrade:
+
+1. Bump `eslint` to `^10.0.0` (drop ESLint 9).
+2. Rename every `import/*` rule reference in your `eslint.config.*` to
+   `import-x/*` — e.g. `"import/no-default-export"` →
+   `"import-x/no-default-export"`. ESLint silently ignores unknown rule
+   names set to `"off"`, so a missed rename turns into a silent loss of
+   your override.
+3. Remove `@types/eslint__js` from your `devDependencies` if you have it
+   — `@eslint/js@10` now ships its own type definitions.
+
+No other consumer changes are required; the rest of the ruleset is
+unchanged.
