@@ -213,7 +213,7 @@ export default defineConfig([
       "max-params": ["error", 7],
       "@stylistic/max-len": [
         "error",
-        { code: 120, ignoreComments: true, ignorePattern: "^(export|import)*", ignoreTemplateLiterals: true },
+        { code: 120, ignoreComments: true, ignorePattern: "^(export|import)\\b", ignoreTemplateLiterals: true },
       ],
       "@stylistic/max-statements-per-line": ["error", { max: 1 }],
       "@stylistic/spaced-comment": "error",
