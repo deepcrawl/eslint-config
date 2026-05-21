@@ -1,4 +1,5 @@
 import eslintJs from "@eslint/js";
+import stylisticPlugin from "@stylistic/eslint-plugin";
 import { defineConfig } from "eslint/config";
 import eslintConfigPrettier from "eslint-config-prettier/flat";
 import arrayFuncPlugin from "eslint-plugin-array-func";
@@ -172,12 +173,12 @@ export default defineConfig([
       "@typescript-eslint/require-array-sort-compare": "error",
       "@typescript-eslint/restrict-template-expressions": "off",
       "@typescript-eslint/return-await": "error",
-      "@typescript-eslint/sort-type-constituents": "error",
       "@typescript-eslint/unified-signatures": "error",
     },
   },
 
   {
+    plugins: { "@stylistic": stylisticPlugin },
     rules: {
       complexity: ["error", 15],
       "default-case-last": "error",
@@ -208,13 +209,14 @@ export default defineConfig([
       "jest/prefer-expect-resolves": "error",
       "jest/prefer-to-be": "error",
       "max-classes-per-file": ["error", 1],
-      "max-len": [
+      "max-lines-per-function": ["warn", { max: 40, skipBlankLines: true, skipComments: true, IIFEs: true }],
+      "max-params": ["error", 7],
+      "@stylistic/max-len": [
         "error",
         { code: 120, ignoreComments: true, ignorePattern: "^(export|import)*", ignoreTemplateLiterals: true },
       ],
-      "max-lines-per-function": ["warn", { max: 40, skipBlankLines: true, skipComments: true, IIFEs: true }],
-      "max-params": ["error", 7],
-      "max-statements-per-line": ["error", { max: 1 }],
+      "@stylistic/max-statements-per-line": ["error", { max: 1 }],
+      "@stylistic/spaced-comment": "error",
       "n/no-missing-import": "off",
       "n/no-unsupported-features/node-builtins": ["error", { ignores: ["fetch", "navigator", "Response", "Request"] }],
       "n/no-unsupported-features/es-syntax": ["error", { ignores: ["modules"] }],
@@ -234,7 +236,6 @@ export default defineConfig([
       "object-shorthand": "error",
       "prefer-template": "error",
       "promise/prefer-await-to-then": "error",
-      "spaced-comment": "error",
     },
   },
 ]);
