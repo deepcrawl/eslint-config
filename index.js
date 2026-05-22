@@ -39,6 +39,29 @@ export default defineConfig([
     extends: [typescriptEslint.configs.disableTypeChecked],
   },
   {
+    plugins: { "import-x": importXPlugin },
+    files: ["**/*.{cjs,cts,js,jsx,mjs,mts,ts,tsx}"],
+    rules: {
+      "import-x/default": "off",
+      "import-x/named": "off",
+      "import-x/namespace": "off",
+      "import-x/newline-after-import": "error",
+      "import-x/no-default-export": "error",
+      "import-x/no-named-as-default": "off",
+      "import-x/no-named-as-default-member": "off",
+      "import-x/no-relative-packages": "error",
+      "import-x/no-unresolved": "off",
+      "import-x/order": [
+        "error",
+        {
+          alphabetize: { order: "asc", caseInsensitive: true },
+          "newlines-between": "always",
+          groups: ["builtin", "external", "internal", "parent", "sibling", "index"],
+        },
+      ],
+    },
+  },
+  {
     plugins: { "array-func": arrayFuncPlugin },
     rules: { "array-func/avoid-reverse": "error" },
   },
@@ -177,23 +200,6 @@ export default defineConfig([
     rules: {
       complexity: ["error", 15],
       "default-case-last": "error",
-      "import-x/default": "off",
-      "import-x/named": "off",
-      "import-x/namespace": "off",
-      "import-x/newline-after-import": "error",
-      "import-x/no-default-export": "error",
-      "import-x/no-named-as-default": "off",
-      "import-x/no-named-as-default-member": "off",
-      "import-x/no-relative-packages": "error",
-      "import-x/no-unresolved": "off",
-      "import-x/order": [
-        "error",
-        {
-          alphabetize: { order: "asc", caseInsensitive: true },
-          "newlines-between": "always",
-          groups: ["builtin", "external", "internal", "parent", "sibling", "index"],
-        },
-      ],
       "jest/expect-expect": "error",
       "jest/padding-around-after-all-blocks": "error",
       "jest/padding-around-after-each-blocks": "error",
