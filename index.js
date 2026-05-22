@@ -8,6 +8,7 @@ import jestPlugin from "eslint-plugin-jest";
 import nodePlugin from "eslint-plugin-n";
 import noLoopsPlugin from "eslint-plugin-no-loops";
 import packageJsonPlugin from "eslint-plugin-package-json";
+import perfectionist from "eslint-plugin-perfectionist"
 import promisePlugin from "eslint-plugin-promise";
 import sonarjsPlugin from "eslint-plugin-sonarjs";
 import typescriptEslint from "typescript-eslint";
@@ -172,7 +173,7 @@ export default defineConfig([
     },
   },
   {
-    plugins: { "@stylistic": stylisticPlugin },
+    plugins: { "@stylistic": stylisticPlugin, perfectionist },
     rules: {
       complexity: ["error", 15],
       "default-case-last": "error",
@@ -224,6 +225,8 @@ export default defineConfig([
       "no-self-assign": "error",
       "no-unreachable-loop": "error",
       "object-shorthand": "error",
+      "perfectionist/sort-intersection-types": "error",
+      "perfectionist/sort-union-types": "error",
       "prefer-template": "error",
       "promise/prefer-await-to-then": "error",
     },

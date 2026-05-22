@@ -224,7 +224,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/utils@npm:8.59.4, @typescript-eslint/utils@npm:^8.0.0":
+"@typescript-eslint/utils@npm:8.59.4, @typescript-eslint/utils@npm:^8.0.0, @typescript-eslint/utils@npm:^8.58.2":
   version: 8.59.4
   resolution: "@typescript-eslint/utils@npm:8.59.4"
   dependencies:
@@ -530,6 +530,7 @@ __metadata:
     eslint-plugin-n: "npm:^18.0.1"
     eslint-plugin-no-loops: "npm:^0.4.0"
     eslint-plugin-package-json: "npm:^1.1.0"
+    eslint-plugin-perfectionist: "npm:^5.9.0"
     eslint-plugin-promise: "npm:^7.3.0"
     eslint-plugin-sonarjs: "npm:^4.0.3"
     prettier: "npm:3.8.3"
@@ -725,6 +726,18 @@ __metadata:
   peerDependencies:
     eslint: ">=9.0.0"
   checksum: 10/a687cc0ddb733ea51980d6bb0fe14265b4641f273c71dff4cef6a51d4ba6d07c0ca3c0520f13e42e1a0a40dddb607f004ce49d9b4db30969da70617ab944f239
+  languageName: node
+  linkType: hard
+
+"eslint-plugin-perfectionist@npm:^5.9.0":
+  version: 5.9.0
+  resolution: "eslint-plugin-perfectionist@npm:5.9.0"
+  dependencies:
+    "@typescript-eslint/utils": "npm:^8.58.2"
+    natural-orderby: "npm:^5.0.0"
+  peerDependencies:
+    eslint: ^8.45.0 || ^9.0.0 || ^10.0.0
+  checksum: 10/99728b54c9c4299a1fac2adb0f9707666e5537e94f1983ec073ff5fa8e87f0f85365052ca564cec8d78a1e0fa797ad6bd2404d57ecce06248ef1a3b8e0da617d
   languageName: node
   linkType: hard
 
@@ -979,6 +992,13 @@ __metadata:
   version: 1.4.0
   resolution: "natural-compare@npm:1.4.0"
   checksum: 10/23ad088b08f898fc9b53011d7bb78ec48e79de7627e01ab5518e806033861bef68d5b0cd0e2205c2f36690ac9571ff6bcb05eb777ced2eeda8d4ac5b44592c3d
+  languageName: node
+  linkType: hard
+
+"natural-orderby@npm:^5.0.0":
+  version: 5.0.0
+  resolution: "natural-orderby@npm:5.0.0"
+  checksum: 10/7620051a2d79af81ac6bce96f6bdec45c291d4acc1d709d62d7a6648b01cda4e751415d63bc71060ce8ab223dbf3ce013f229ee683ea651868f36ea4008d0dbe
   languageName: node
   linkType: hard
 
