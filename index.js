@@ -14,7 +14,6 @@ import typescriptEslint from "typescript-eslint";
 
 export default defineConfig([
   { linterOptions: { reportUnusedDisableDirectives: true } },
-
   eslintJs.configs.recommended,
   importXPlugin.flatConfigs.recommended,
   importXPlugin.flatConfigs.typescript,
@@ -29,7 +28,6 @@ export default defineConfig([
       "package-json/sort-collections": ["error", ["devDependencies", "dependencies", "peerDependencies", "config"]],
     },
   },
-
   {
     files: ["**/*.{cts,mts,ts,tsx}"],
     extends: [typescriptEslint.configs.recommendedTypeChecked],
@@ -39,7 +37,6 @@ export default defineConfig([
     files: ["**/*.{cjs,js,jsx,mjs}"],
     extends: [typescriptEslint.configs.disableTypeChecked],
   },
-
   {
     plugins: { "array-func": arrayFuncPlugin },
     rules: { "array-func/avoid-reverse": "error" },
@@ -74,9 +71,7 @@ export default defineConfig([
       "sonarjs/prefer-while": "error",
     },
   },
-
   eslintConfigPrettier,
-
   {
     files: ["**/*.{cts,mts,ts,tsx}"],
     rules: {
@@ -176,7 +171,6 @@ export default defineConfig([
       "@typescript-eslint/unified-signatures": "error",
     },
   },
-
   {
     plugins: { "@stylistic": stylisticPlugin },
     rules: {
@@ -211,10 +205,6 @@ export default defineConfig([
       "max-classes-per-file": ["error", 1],
       "max-lines-per-function": ["warn", { max: 40, skipBlankLines: true, skipComments: true, IIFEs: true }],
       "max-params": ["error", 7],
-      "@stylistic/max-len": [
-        "error",
-        { code: 120, ignoreComments: true, ignorePattern: "^(export|import)\\b", ignoreTemplateLiterals: true },
-      ],
       "@stylistic/max-statements-per-line": ["error", { max: 1 }],
       "@stylistic/spaced-comment": "error",
       "n/no-missing-import": "off",
