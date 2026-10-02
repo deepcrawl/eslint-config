@@ -1,10 +1,10 @@
 import eslintJs from "@eslint/js";
 import stylisticPlugin from "@stylistic/eslint-plugin";
+import vitestPlugin from "@vitest/eslint-plugin";
 import { defineConfig } from "eslint/config";
 import eslintConfigPrettier from "eslint-config-prettier/flat";
 import arrayFuncPlugin from "eslint-plugin-array-func";
 import importXPlugin from "eslint-plugin-import-x";
-import jestPlugin from "eslint-plugin-jest";
 import nodePlugin from "eslint-plugin-n";
 import noLoopsPlugin from "eslint-plugin-no-loops";
 import packageJsonPlugin from "eslint-plugin-package-json";
@@ -17,7 +17,8 @@ export default defineConfig([
   eslintJs.configs.recommended,
   importXPlugin.flatConfigs.recommended,
   importXPlugin.flatConfigs.typescript,
-  jestPlugin.configs["flat/recommended"],
+  vitestPlugin.configs.recommended,
+  vitestPlugin.configs.env,
   nodePlugin.configs["flat/recommended"],
   promisePlugin.configs["flat/recommended"],
   {
@@ -168,7 +169,9 @@ export default defineConfig([
       "@typescript-eslint/require-array-sort-compare": "error",
       "@typescript-eslint/restrict-template-expressions": "off",
       "@typescript-eslint/return-await": "error",
+      "@typescript-eslint/unbound-method": "off",
       "@typescript-eslint/unified-signatures": "error",
+      "vitest/unbound-method": "error",
     },
   },
   {
@@ -193,15 +196,6 @@ export default defineConfig([
           groups: ["builtin", "external", "internal", "parent", "sibling", "index"],
         },
       ],
-      "jest/expect-expect": "error",
-      "jest/padding-around-after-all-blocks": "error",
-      "jest/padding-around-after-each-blocks": "error",
-      "jest/padding-around-before-all-blocks": "error",
-      "jest/padding-around-before-each-blocks": "error",
-      "jest/padding-around-describe-blocks": "error",
-      "jest/padding-around-test-blocks": "error",
-      "jest/prefer-expect-resolves": "error",
-      "jest/prefer-to-be": "error",
       "max-classes-per-file": ["error", 1],
       "max-lines-per-function": ["warn", { max: 40, skipBlankLines: true, skipComments: true, IIFEs: true }],
       "max-params": ["error", 7],
@@ -226,6 +220,31 @@ export default defineConfig([
       "object-shorthand": "error",
       "prefer-template": "error",
       "promise/prefer-await-to-then": "error",
+      "vitest/consistent-test-it": ["error", { fn: "it", withinDescribe: "it" }],
+      "vitest/expect-expect": "error",
+      "vitest/no-alias-methods": "error",
+      "vitest/no-commented-out-tests": "warn",
+      "vitest/no-importing-vitest-globals": "error",
+      "vitest/no-test-prefixes": "error",
+      "vitest/no-test-return-statement": "error",
+      "vitest/padding-around-after-all-blocks": "error",
+      "vitest/padding-around-after-each-blocks": "error",
+      "vitest/padding-around-before-all-blocks": "error",
+      "vitest/padding-around-before-each-blocks": "error",
+      "vitest/padding-around-describe-blocks": "error",
+      "vitest/padding-around-test-blocks": "error",
+      "vitest/prefer-comparison-matcher": "error",
+      "vitest/prefer-equality-matcher": "error",
+      "vitest/prefer-expect-resolves": "error",
+      "vitest/prefer-hooks-in-order": "error",
+      "vitest/prefer-hooks-on-top": "error",
+      "vitest/prefer-mock-promise-shorthand": "error",
+      "vitest/prefer-to-be": "error",
+      "vitest/prefer-to-contain": "error",
+      "vitest/prefer-to-have-length": "error",
+      "vitest/prefer-todo": "error",
+      "vitest/prefer-vi-mocked": "error",
+      "vitest/require-awaited-expect-poll": "error",
     },
   },
 ]);
